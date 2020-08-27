@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="204B9FF5-58B5-B6BF-15F5-962BE8220516" name="Customer">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>77985D97-9DE8-9B38-64E5-65C09515DE7D</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="083D4962-F653-3B9D-459A-7FC0641EA709">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>9D9C7D47-93DC-B677-BFA6-88ABB5E69214</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="First_Name" id="BE99F188-CD61-0DA3-840F-397E341D7465">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>31EC1192-EAD5-A74F-D330-F68B9CC10560</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Last_Name" id="32E3B406-4D86-8BE3-BCF9-46ADA992AD1A">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>3C7503AC-EAF6-AC6B-4B44-A225FDE6249B</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Zip_Code" id="F35348C8-475C-FDC0-F8BA-FF8FF21E49A4">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>35235710-6BE4-DF97-8FEF-5E2053B514D8</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Orders_Id" id="A5EEF7C7-3B73-2DA7-A412-1C2D6077B78F">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>B40CC5A9-06FE-BBFF-D7EA-C577FE51081F</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E0B1386E-14EB-7C92-5D7C-EDA4D535E705" referredColumn="BEF66800-056A-C129-DC0F-4740153B872D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5F39FE88-FBB5-0E51-16EF-3F4ABCDB5A43" name="Customer_PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>A9A5EC41-C445-0155-21F2-1599870C57D5</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="083D4962-F653-3B9D-459A-7FC0641EA709"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8EC5620C-588F-88E2-CDCB-7C581F0EFA7A" name="Customer_Orders_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>A08901F9-92B7-43E6-27A3-40574333BAD6</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5EEF7C7-3B73-2DA7-A412-1C2D6077B78F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

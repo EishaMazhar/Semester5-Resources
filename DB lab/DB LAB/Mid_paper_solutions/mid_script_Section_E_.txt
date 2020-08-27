@@ -1,0 +1,60 @@
+                                         --Gardner Schema
+
+create table location 
+(locationid number(10) not null, Name varchar2(255) not null, sunlight number(5, 5) not null, water number(5, 5) not null, primary key(locationid));
+
+Create table gardener 
+(gardenerid number(3) not null, Name varchar2(255) not null, age number(3) not null, primary key(gardenerid));
+
+Create table plant 
+(plantid number(3) not null, name varchar2(255), sunlight number(5, 5) not null, water number(5, 5) not null, weight number(5, 5) not null, primary key(plantid));
+
+Create table planted 
+(plantfk number (3) not null, gardenerfk number(3) not null, locationfk number(3) not null, date_ DATE not null, seeds number not null, 
+primary key (plantfk, gardenerfk, locationfk), foreign key (plantfk) references plant(plantid),
+foreign key (gardenerfk) references gardener(gardenerid) , foreign key (locationfk) references location(locationid));
+
+create table picked
+(plantfk number (3) not null, gardenerfk number(3) not null, locationfk number(3) not null, 
+date_ DATE not null, amount number not null, weight number(5,4) not null, primary key (plantfk, gardenerfk, locationfk), 
+foreign key (plantfk) references plant(plantid), foreign key (gardenerfk) references gardener(gardenerid) , foreign key (locationfk) references location(locationid));
+
+
+
+insert into location values(000, 'East', 0.28, 0.80);
+insert into location values(001, 'North', 0.17, 0.84);
+insert into location values(002, 'West', 0.38, 0.48);
+insert into location values(003, 'South', 0.45, 0.66);
+
+
+insert into gardener values(0, 'Mother', 36);
+insert into gardener values(1, 'Father', 38);
+insert into gardener values(2, 'Tim', 15);
+insert into gardener values (3, 'Erin', 12);
+
+insert into plant values(0, 'Carrot', .26, .82, .08);
+insert into plant values(1, 'Beet', .44, .80, .04);
+insert into plant values (2, 'Corn', .44, .76, .26);
+insert into plant values (3, 'Tomato', .42, .80, .16);
+insert into plant values (4,  'Radish', .28, .84, .02); 
+ 
+insert into planted values(0, 0, 0, '18-APR-2019', 28);
+insert into planted values(0, 1, 0, '19-APR-2019', 28);
+insert into planted values (0,1, 1,'14-APR-2019' , 14);
+insert into planted values ( 1,0,2,'18-APR-2019',36);
+insert into planted values( 2, 1, 3, '14-APR-2019',20);
+insert into planted values (2,2, 2,  '19-APR-2019',12);
+insert into planted values (2,0, 2,  '20-APR-2019',12);
+insert into planted values(3,3,3,'25-APR-2019', 38);
+insert into planted values ( 4, 2, 0, '30-APR-2019',30);
+
+insert into picked values(0,0,0,'18-AUG-2019', 28, 2.32);
+insert into picked values(1,0,2, '16-AUG-2019', 32, 1.02);
+insert into picked values(2,1,3, '22-AUG-2019', 18, 5.96);
+insert into picked values(2,2,2,'28-AUG-2019', 10, 4.58);
+insert into picked values(3,3,3, '22-AUG-2019', 35, 3.84);
+insert into picked values(4,2,0, '07-JUl-2019', 23,0.52);
+insert into picked values(4,0,0, '08-JUl-2019', 23,0.52);
+
+commit;
+

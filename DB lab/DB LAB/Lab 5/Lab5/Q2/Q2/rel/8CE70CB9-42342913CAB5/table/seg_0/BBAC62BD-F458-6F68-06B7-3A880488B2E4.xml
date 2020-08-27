@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BBAC62BD-F458-6F68-06B7-3A880488B2E4" name="Parts">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>9FF28AF9-6C5A-8762-D0B6-AB8CD56A1A88</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="9838A582-6B05-1E1C-5C2B-B130C6145928">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>F2AB3399-BC0E-5A77-72A5-54F8FD7A3034</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="B693DC4C-5541-8BB5-3808-40F577CCA618">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>0FCEB31C-6322-FF92-F2E4-DDD8ED6D39FE</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Price" id="F105FC02-4E49-E0D9-8083-8150CF6E235D">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>BB4A2ED1-F187-E3C6-1B32-F926D35981EE</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Quantity" id="C2DFAB77-2555-49C3-B6BD-C277E2B4E8CA">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>1C2B617B-78D7-FD7D-5EFE-6D7ECDADAB69</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Orders_Id" id="E7C32CE1-8E92-0725-DE4D-2BD50C631B2E">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>045E7BE9-11E5-7907-8924-5F26FBCDDBB3</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9EE8A61D-A760-429D-9220-0066757F448B" referredColumn="BEF66800-056A-C129-DC0F-4740153B872D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E754DA23-143D-D52D-DE93-D052C035F53B" name="Parts_PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>DEB7112E-C474-A64B-A78F-1AEA8D958F0E</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9838A582-6B05-1E1C-5C2B-B130C6145928"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2A0337B9-7716-8785-EDCC-17950AC9F674" name="Parts_Orders_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>26135950-E0C9-85AF-27BA-2FA73128214B</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E7C32CE1-8E92-0725-DE4D-2BD50C631B2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

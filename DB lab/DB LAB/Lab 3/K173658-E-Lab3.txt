@@ -1,0 +1,87 @@
+Q-1
+
+CREATE TABLE faculty
+(Faculty_Id Number (6),
+Last_Name Varchar2(15) Not NULL,
+First_Name Varchar2(15) Not NULL,
+Dept Char(3),CONSTRAINTS faculty_pk  PRIMARY KEY( Faculty_Id));
+
+CREATE TABLE Department 
+( Dept_code char(3), 
+Dept_Name Varchar2(20) NOT NULL , 
+CONSTRAINTS dept_key PRIMARY KEY (Dept_code));
+
+ALTER TABLE Department
+add location char(7);
+
+ALTER TABLE faculty
+ADD CONSTRAINTS faculty_dept_fk FOREIGN KEY (DEPT) 
+REFERENCES Department(Dept_code);
+
+ALTER TABLE faculty MODIFY Last_Name Varchar2(25);
+
+
+Q-2
+
+create table publisher
+(Name varchar(15) primary key,
+Address varchar(30),
+Phone int(11)
+);
+
+create table BOOK
+(BookId varchar(10) primary key,
+Title varchar(15),
+PublisherName varchar(15),
+add constraint pubName foreign key (PublisherName) 
+refereneces PUBLISHER(Name)
+);
+
+create table BOOK_AUTHORS
+(BookId varchar(10) primary key,
+AuthorName varchar(15) primry key
+add constraint authBookId foreign key (BookId) 
+refereneces BOOK(BookId)
+);
+
+create table LIBRARY_BRANCH
+(BranchId varchar(7) primary key,
+BranchName varchar(15),
+Address varchar(15)
+);
+
+create table BORROWER
+(CardNo varchar(10) primary key,
+Name varchar(15)
+Address varchar(30)
+Phone int(11)
+);
+
+create table BOOK_COPIES
+(BookId varchar(10) primary key,
+BranchId varchar(7) primary key,
+No_Of_Copies int(4)
+add constraint copyBookId foreign key (BookId) 
+refereneces BOOK(BookId),
+
+add constraint copyBranchId foreign key (BranchId) 
+refereneces LIBRARY_BRANCH(BranchId);
+);
+
+create table BOOK_LOANS
+(BookId varchar(10) primary key,
+BranchId varchar(7) primary key,
+CardNo varchar(10) primary key
+DateOut date(8),
+Due Date date(8),
+add constraint loanBookId foreign key (BookId) 
+refereneces BOOK(BookId),
+
+add constraint loanBranchId foreign key (BranchId) 
+refereneces LIBRARY_BRANCH(BranchId),
+
+add constraint loanCardNo foreign key (CardNo) 
+refereneces BORROWER(CardNo);
+);
+
+

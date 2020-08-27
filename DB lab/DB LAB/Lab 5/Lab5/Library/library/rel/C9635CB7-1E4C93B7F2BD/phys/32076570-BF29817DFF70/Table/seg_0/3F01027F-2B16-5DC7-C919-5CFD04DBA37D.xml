@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Book" directorySegmentName="seg_0" id="3F01027F-2B16-5DC7-C919-5CFD04DBA37D">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="authors_first_name" id="24A89DF9-0F04-7DFF-741B-013D32C3FDE8">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="author_last_name" id="551AD078-936C-AD21-1959-3F7D0262B360">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="rating" id="5B3DFE25-CC1D-B852-990D-A503E3C901B4">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="title" id="680A2AA5-9EE6-7F66-EFB7-687A453747A8">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="book_id" id="AF2D86B2-6D5D-C9FD-114A-BF6C0D819438">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Entity_1_PK" id="3DB5EE04-388A-6525-3F4F-5334DD82AE2A">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

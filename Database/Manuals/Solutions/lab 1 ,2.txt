@@ -1,0 +1,100 @@
+SELECT ename, deptno from emp where deptno= any(select deptno from emp where comm >0) AND sal=any(se	DBLEARNING
+13 minutes ago	SELECT * from emp where(comm>0) and where any( deptno=(sal+comm) from emp);	DBLEARNING
+15 minutes ago	SELECT * from emp where(comm>0) and where deptno=(sal+comm) from emp;	DBLEARNING
+16 minutes ago	SELECT * from emp where(comm>0) and where deptno=job from emp;	DBLEARNING
+16 minutes ago	SELECT * from emp where(comm>0) and whose deptno=job;	DBLEARNING
+17 minutes ago	SELECT * from emp where(comm>0);	DBLEARNING
+17 minutes ago	SELECT * from emp where(comm>0) and deptno=job;	DBLEARNING
+18 minutes ago	SELECT * from emp whose(comm>0) and deptno=job;	DBLEARNING
+19 minutes ago	SELECT ename, deptno, sal from emp where deptno= (select deptno from emp where comm >0);	DBLEARNING
+26 minutes ago	SELECT job, sum(sal) from emp where deptno!=( select deptno from dept where dname = 'SALES') group b	DBLEARNING
+26 minutes ago	SELECT job, sum(sal) from emp where deptno!=( select deptno from dept where dname = 'SALES') group b	DBLEARNING
+26 minutes ago	SELECT job, sum(sal) from emp where deptno!=( select deptno from dept dname = 'SALES') group by job	DBLEARNING
+27 minutes ago	SELECT job, sum(sal) from emp where deptno!=( select deptno from dept dname = 'SALES') group by job	DBLEARNING
+35 minutes ago	SELECT deptno from emp group by deptno having count(empno)>3;	DBLEARNING
+37 minutes ago	SELECT deptno, AVG(sal) AVERAGE_SALARY FROM emp GROUP BY deptno; SELECT deptno, job , sum(sal) from	DBLEARNING
+37 minutes ago	SELECT deptno from emp group by deptno having count(empno >3);	DBLEARNING
+38 minutes ago	SELECT deptno from emp where emp>3 group by deptno;	DBLEARNING
+43 minutes ago	SELECT deptno, max(sal) from emp where sal>2900 group by deptno;	DBLEARNING
+43 minutes ago	SELECT deptno, max(sal) from emp where max(sal)>2900 group by deptno;	DBLEARNING
+43 minutes ago	SELECT deptno, max(sal) from emp where sal>2900 group by deptno;	DBLEARNING
+44 minutes ago	SELECT deptno, max(sal) from emp where max(sal)>2900 group by deptno;	DBLEARNING
+44 minutes ago	SELECT deptno, max(sal) from emp where max(sal)>2900 group by dept;	DBLEARNING
+46 minutes ago	SELECT deptno, max(sal) from emp where( select max(sal)>2900 from emp);	DBLEARNING
+46 minutes ago	SELECT deptno, max(sal) from emp where( select max(sal)>2900 from dept);	DBLEARNING
+47 minutes ago	SELECT deptno, count (*) from emp group by deptno;	DBLEARNING
+48 minutes ago	SELECT deptno, max(sal) from dept where( select max(sal)>2900 from dept);	DBLEARNING
+49 minutes ago	SELECT deptno, max(sal) from dept where( select max(sal)>$2900);	DBLEARNING
+51 minutes ago	SELECT deptno, count (*)emp from dept;	DBLEARNING
+52 minutes ago	SELECT deptno, count *(emp) from * dept;	DBLEARNING
+60 minutes ago	SELECT deptno from dept where deptno not in ( select deptno from emp);	DBLEARNING
+60 minutes ago	SELECT deptno from dept where deptno not in ( select deptno from dept);	DBLEARNING
+65 minutes ago	SELECT * FROM emp where deptno!=30 AND sal > (select MAX(sal) from emp where deptno=30);	DBLEARNING
+67 minutes ago	SELECT * FROM emp where deptno!=30 AND sal > (select MIN(sal) from emp where deptno=30);	DBLEARNING
+75 minutes ago	SELECT * FROM emp where deptno!=30 AND sal > (select * sal from emp where deptno=30);	DBLEARNING
+77 minutes ago	SELECT * FROM emp where deptno!=30 and sal > (select sal from emp where deptno=30);	DBLEARNING
+84 minutes ago	SELECT * FROM emp where deptno=10 AND sal >= any ( select sal from emp where deptno=30);	DBLEARNING
+87 minutes ago	SELECT * FROM emp where(select sal from deptno=10)>=(select sal from deptno=30);	DBLEARNING
+87 minutes ago	SELECT * FROM emp where deptno=10 and (select sal from deptno=10)>=(select sal from deptno=30);	DBLEARNING
+99 minutes ago	SELECT deptno, AVG(sal) AVERAGE_SALARY FROM emp GROUP BY deptno HAVING AVG(sal) < 2000;	DBLEARNING
+100 minutes ago	SELECT deptno, job, AVG(sal) AVERAGE_SALARY FROM emp GROUP BY deptno HAVING AVG(sal) < 2000;	DBLEARNING
+100 minutes ago	SELECT deptno, job, avg(sal) AVERAGE_SALARY FROM emp GROUP BY deptno HAVING AVG(sal) < 2000;	DBLEARNING
+105 minutes ago	SELECT deptno, job , sum(sal) from emp GROUP BY deptno, job;	DBLEARNING
+107 minutes ago	SELECT * FROM deptno;	DBLEARNING
+107 minutes ago	SELECT deptno, AVG(sal) AVERAGE_SALARY FROM emp GROUP BY deptno;	DBLEARNING
+107 minutes ago	SELECT * FROM deptno;	DBLEARNING
+107 minutes ago	SELECT * FROM deptno; SELECT deptno AVG(sal) AVERAGE_SALARY FROM emp GROUP BY deptno;	DBLEARNING
+108 minutes ago	SELECT deptno AVG(sal) AVERAGE_SALARY FROM emp GROUP BY deptno;	DBLEARNING
+108 minutes ago	select deptno avg(sal) AVERAGE_SALARY FROM emp GROUP BY deptno;	DBLEARNING
+7 days ago	select NVL2(comm, sal+comm, sal) from emp;	DBLEARNING
+7 days ago	select ename, NVL(TO_CHAR(comm), 'no comission') from emp;	DBLEARNING
+7 days ago	select ename, NVL2(TO_CHAR(comm), 'no comission') from emp;	DBLEARNING
+7 days ago	select * from emp where (sal / 30 > 100);	DBLEARNING
+7 days ago	select * from emp where hiredate between ('jan-23-1981') AND ('jan-3-1983');	DBLEARNING
+7 days ago	select ename from emp where (sysdate- hiredate) > (35*365);	DBLEARNING
+7 days ago	select * from emp where hiredate between ('jan-23-1981') AND ('jan-3-1983');	DBLEARNING
+7 days ago	select ename from emp where (sysdate- hiredate) > (35*365);	DBLEARNING
+7 days ago	select ename from emp where (sysdate- hiredate) >35*365;	DBLEARNING
+7 days ago	select sysdate "date" from dual;	DBLEARNING
+7 days ago	select ename, hiredate, TO_CHAR(hiredate, 'DD')day from emp;	DBLEARNING
+7 days ago	select ename, hiredate, TO_CHAR(hiredate, 'DD') from emp;	DBLEARNING
+7 days ago	select * total(sal) from emp;	DBLEARNING
+7 days ago	select ename, NVL2(comm, 0, no comission) as income from emp;	DBLEARNING
+7 days ago	select ename, NVL2(comm, 0, "no comission") as income from emp;	DBLEARNING
+7 days ago	select ename, NVL2(comm, comm, "no comission") as income from emp;	DBLEARNING
+7 days ago	select ename, NVL2(comm, comm, "no comission") from emp;	DBLEARNING
+7 days ago	select ename, NVL2(comm, comm, 'no comission') from emp;	DBLEARNING
+7 days ago	select * from emp where hiredate between ('jan-23-1981') AND ('jan-3-1983');	DBLEARNING
+7 days ago	select MIN(hiredate), MAX(hiredate) from emp;	DBLEARNING
+7 days ago	select * from emp where (sal / 30 > 100);	DBLEARNING
+7 days ago	select count (*) from emp; select sysdate "date" from dual; select 2*6 from dual; Select TO_DATE ('j	DBLEARNING
+7 days ago	select count (*) from emp; select sysdate "date" from dual; select 2*6 from dual; Select TO_DATE ('j	DBLEARNING
+7 days ago	select * from emp where (sal/30 > 100);	DBLEARNING
+7 days ago	select * from emp whose(sal/30 > 100);	DBLEARNING
+7 days ago	select count (*) from emp;	DBLEARNING
+7 days ago	select * from emp order by sal;	DBLEARNING
+7 days ago	select ename, job, 12*sal from emp;	DBLEARNING
+7 days ago	select column_name1 AS column_Alias, column_name2 column_Alias2 from emp1;	DBLEARNING
+7 days ago	select column_name1 AS column_Alias, column_name2 column_Alias2 from dual;	DBLEARNING
+7 days ago	select column_name1 AS column_Alias, column_name2 column_Alias2 from emp;	DBLEARNING
+7 days ago	select 10 *(12/3-1) from dual;	DBLEARNING
+7 days ago	select 10 * 12 /3 - 1 from dual;	DBLEARNING
+7 days ago	Select 10*12/3–1 from dual;	DBLEARNING
+7 days ago	Select 10* 12/3–1 from dual;	DBLEARNING
+7 days ago	Select 10 * 12 / 3 – 1 from dual;	DBLEARNING
+7 days ago	Select 10 * 12 / 3 – 1 FROM DUAL;	DBLEARNING
+7 days ago	Select TO_DATE ('jul-31-2017') + 2 from dual;	DBLEARNING
+7 days ago	select TO_DATE ('aug-2-2017')- TO_DATE('july-31-2017') from dual;	DBLEARNING
+7 days ago	Select TO_DATE ('jul-31-2017') + 2 from dual;	DBLEARNING
+7 days ago	Select TO_DATE ('31-jul-2012') + 2 FROM DUAL;	DBLEARNING
+7 days ago	Select TO_DATE (’31-jul-2012’) + 2 FROM DUAL;	DBLEARNING
+7 days ago	select 2*6 from dual;	DBLEARNING
+7 days ago	select sysdate "date" from dual;	DBLEARNING
+7 days ago	select count (*) from emp;	DBLEARNING
+2 weeks ago	SELECT ENAME, DEPTNO, HIREDATE FROM EMP ORDER BY DEPTNO ASC, HIREDATE DESC;	DBLEARNING
+2 weeks ago	SELECT COUNT(*) FROM EMP WHERE SAL >2000;	DBLEARNING
+2 weeks ago	SELECT ENAME FROM EMP2 WHERE ENAME LIKE '__A%';	DBLEARNING
+2 weeks ago	ELECT ENAME FROM EMP WHERE ENAME LIKE '__A%';	DBLEARNING
+2 weeks ago	SELECT ENAME FROM EMP LIKE '%%A%';	DBLEARNING
+2 weeks ago	SELECT ENAME FROM EMP LIKE '%%A';	DBLEARNING
+2 weeks ago	SELECT MAX(SAL)-MIN(SAL) FROM EMP;	DBLEARNING

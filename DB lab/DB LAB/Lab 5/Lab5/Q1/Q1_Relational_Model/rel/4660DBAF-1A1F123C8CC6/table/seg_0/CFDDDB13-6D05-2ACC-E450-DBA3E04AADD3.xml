@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CFDDDB13-6D05-2ACC-E450-DBA3E04AADD3" name="Department">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>DB62D1EB-3E91-718C-9779-054C237384E2</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Name" id="18926B6E-8DD7-2DC0-B225-5023275667A5">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>F4FC0773-6E77-5A66-6B80-D633FE75F061</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Dept_Code" id="C2E92254-12AF-F6F7-0246-DF05B396053A">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>CD8A5314-5396-03FA-1653-3F7421332AE2</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Office_No" id="F29145B1-4876-80C7-5139-3473478386D5">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>45E5C619-BA90-FF5B-21ED-15D1FF860D83</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Office_Phone_No" id="8C86DB79-058D-218C-7CE2-2A285FB55353">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>F9554F4D-EB07-6041-E5D2-9932EF7CEB42</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="College" id="B331754C-4E43-38EA-6C00-A79198CE3472">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>F6E0101C-6C73-E53C-744B-2B219D821110</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Student_SSN" id="400AE90B-1106-4E61-1FC4-AD121AC65B5A">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>78ED89D3-A4E6-E106-8F92-AD3EA50F47BE</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3F3EF37-7C0D-8F9A-FDA2-86702552CCAC" referredColumn="5B08A627-D7A1-E1E4-20E9-F82992E97B0A"/>
+</associations>
+</Column>
+<Column name="Student_Id" id="C20D6035-D51A-0009-A1AE-B858A47B2BEB">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>042461DE-1C24-BB68-6379-0467C7CAD483</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3F3EF37-7C0D-8F9A-FDA2-86702552CCAC" referredColumn="F3E57D84-E98A-EF8A-7641-6C3676306918"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BACBF8C3-74A1-6843-BF19-B25905347AD5" name="Department_PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>CDA7A6B8-116A-1804-20B9-BB5B3D458C78</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18926B6E-8DD7-2DC0-B225-5023275667A5"/>
+<colUsage columnID="C2E92254-12AF-F6F7-0246-DF05B396053A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="68D8DB9F-7DA8-14AD-2305-2768774E60A3" name="Department__IDX">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>22A954ED-88AC-B11B-5EEB-34D1C65C732C</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="400AE90B-1106-4E61-1FC4-AD121AC65B5A"/>
+<colUsage columnID="C20D6035-D51A-0009-A1AE-B858A47B2BEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="19EAE283-8316-C828-F0AD-9C66883E80DB" name="Department_Student_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>22A954ED-88AC-B11B-5EEB-34D1C65C732C</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="400AE90B-1106-4E61-1FC4-AD121AC65B5A"/>
+<colUsage columnID="C20D6035-D51A-0009-A1AE-B858A47B2BEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

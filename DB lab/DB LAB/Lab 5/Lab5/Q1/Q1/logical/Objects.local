@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="12A3C7AD-3375-42E7-7DB3-5E29A6C3ECDC" name="Course" seqName="seg_0"/>
+   <object objectType="Entity" objectID="DB62D1EB-3E91-718C-9779-054C237384E2" name="Department" seqName="seg_0"/>
+   <object objectType="Entity" objectID="20F269E8-DCA3-BDDC-3D79-45B2092CD057" name="Grade_Report" seqName="seg_0"/>
+   <object objectType="Entity" objectID="9CEBB97E-BA23-CA17-0D64-FDEDB554FAEB" name="Section" seqName="seg_0"/>
+   <object objectType="Entity" objectID="B9F07184-0825-3235-C885-B5AB686897DB" name="Student" seqName="seg_0"/>
+   <object objectType="Relation" objectID="83118D12-E49F-EBBE-577F-FE970557B2B2" name="Relation_1" seqName="seg_0"/>
+   <object objectType="Relation" objectID="726A553F-DD67-3802-3BCF-8F8B7C048A60" name="Relation_2" seqName="seg_0"/>
+   <object objectType="Relation" objectID="FA9C2E2A-ECBA-3AC9-9E50-D0282FCC50A0" name="Relation_3" seqName="seg_0"/>
+   <object objectType="Relation" objectID="22A954ED-88AC-B11B-5EEB-34D1C65C732C" name="Relation_4" seqName="seg_0"/>
+   <object objectType="Relation" objectID="E33565F2-D871-B795-D9DA-45EF3389C530" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B5248737-8B79-2DA4-A467-129E0120310D" name="Relation_6" seqName="seg_0"/>
+   <object objectType="Relation" objectID="2B701325-5D75-B61C-BC40-D0D50F450CE5" name="Relation_7" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

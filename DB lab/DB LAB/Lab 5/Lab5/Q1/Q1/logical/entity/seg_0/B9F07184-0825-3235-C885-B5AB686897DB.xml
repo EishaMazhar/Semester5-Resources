@@ -1,0 +1,255 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B9F07184-0825-3235-C885-B5AB686897DB" name="Student">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:56:46 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="First_Name" id="E9A1F883-4AD8-97DD-B08F-A33A78F66E52">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:56:54 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id" id="756F9604-D982-8C07-4682-0254722093BD">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:57:28 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SSN" id="7CCDB23B-5D4A-7790-CCCA-04030927469A">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:58:46 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Current_Address" id="905CDE33-B068-A896-D575-1EFC04090F2C">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:00:10 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Current_Phone_no" id="88F3067F-AAA3-BA26-2B7F-AE3ADD14AE92">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:01:04 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Permanent_Address" id="C0C51A50-6AC3-F950-C228-AD5B379E136D">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:01:58 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Permanent_Phone_no" id="429BE1BA-62B0-7710-2D97-B6C87FBB08FA">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:02:44 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Birth_date" id="8719F2FD-66CF-8D4B-B2A2-C69BFC63695A">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:03:26 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Gender" id="9544CCB8-C564-AC45-1421-22A053A261EB">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:03:39 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Class" id="BBA50FFF-A05B-9E71-B38C-5016B2B48B68">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:04:24 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Major_dept" id="02C5F767-E902-B46C-CD4D-2B917179DA65">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:04:43 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Minor_dept" id="D051C3A3-3861-EDD8-4891-CBB2FFD3507B">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:05:13 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Degree" id="DA8D4B0C-4A40-F3D3-17EF-15A4D9FE7948">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:05:24 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Last_Name" id="B9D40C35-18DE-BAA1-0DC0-218CCF3DF4D9">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:06:24 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="1352AD0B-1013-D1C1-DDAD-90F79877BE95">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:23:07 UTC</createdTime>
+<generatorID>726A553F-DD67-3802-3BCF-8F8B7C048A60</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<referedAttribute>60051875-C82D-45FB-92B7-5782ABD51231</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name1" id="01BF148F-79F1-CD13-5D2F-EDBA892984B6">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:23:17 UTC</createdTime>
+<generatorID>FA9C2E2A-ECBA-3AC9-9E50-D0282FCC50A0</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<referedAttribute>F4FC0773-6E77-5A66-6B80-D633FE75F061</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dept_Code" id="1E75E3E8-6833-30FB-1303-0B4C5453ED0A">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:23:17 UTC</createdTime>
+<generatorID>FA9C2E2A-ECBA-3AC9-9E50-D0282FCC50A0</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<referedAttribute>CD8A5314-5396-03FA-1653-3F7421332AE2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="828FB62F-79E4-FAE9-8FEB-8A0CD7AD0CA5" name="Student PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:59:22 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7CCDB23B-5D4A-7790-CCCA-04030927469A</attributeRef>
+<attributeRef>756F9604-D982-8C07-4682-0254722093BD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

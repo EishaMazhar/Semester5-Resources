@@ -1,0 +1,73 @@
+Q-1
+
+select upper(m_name), to_char(sysdate,'YYYY')-to_char(born,'YYYY') as age
+from musician where died is null
+
+Q-2
+
+select m_name from musician where m_no not in(select orgnizer from concert)
+
+Q-3
+
+select distinct instrument from performer order by instrument asc
+
+Q-4
+
+select m_name
+from place p, musician m, concert c
+where c.concert_venue = 'Bridgewater Hall'
+AND c.concert_in = place_no
+AND place_country = 'England'
+AND c.orgnizer = m_no;
+
+Q-5
+
+select m.m_name, p.place_town
+from place p, musician m
+where m.born_in = (select born_in from musician where m_name = 'James First')
+AND m.born_in = p.place_no
+AND m.m_name != 'James First';
+
+Q-6
+
+select perf_is, count(instrument)
+from performer
+group by perf_is
+having count(instrument) >= 2
+order by count(instrument),perf_is
+
+Q-7
+
+select distinct m.m_name, m.m_no
+from musician m, performer p, concert c
+where p.perf_is = m.m_no and c.orgnizer = m.m_no;
+
+Q-8
+
+select distinct p.perf_is, m.m_name
+from performer p, musician m
+where p.perf_is = m.m_no
+AND (p.instrument = 'Violin' OR p.instrument = 'Guitar')
+AND m.born_in = (select place_no from place where (place_town = 'Manchester') AND (place_country = 'England'
+
+Q-9
+
+select m1.m_name
+from musician m1, musician m2
+where m1.born_in = m2.living_in
+AND m1.m_no = m2.m_no
+
+Q-10
+
+select m.m_name, m.born, p.instrument
+from musician m, performer p
+where m.died is NULL
+AND m.m_no = p.perf_is
+AND p.instrument in (select p.instrument from musician m, performer p where m.m_no = p.perf_is AND m.m_name = 'Theo Mengel');
+
+Q-11
+
+select perf_is, count(instrument)
+from performer
+group by perf_is
+having count(instrument) = (select max(cnt) from (select count(instrument) as cnt from performer group by perf_is));

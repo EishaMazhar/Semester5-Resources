@@ -1,0 +1,22 @@
+SELECT * FROM EMP;
+
+1.
+SELECT ENAME, JOB, SAL FROM EMP 
+WHERE (JOB = 'CLERK' or JOB = 'ANALYST') and 
+(sal <> 1000 AND sal <> 3000 AND sal <> 5000);
+sal not in (1000,3000,5000);
+
+2.  SELECT * FROM emp WHERE ROWNUM <= 4 ORDER BY SAL DEsc;
+3.  SELECT AVG(SAL) AS AVG_SALARY FROM EMP;
+4.  SELECT ENAME, DEPTNO, HIREDATE FROM EMP ORDER BY DEPTNO ASC , HIREDATE DESC;
+5.  SELECT EMPNO , ENAME , SAL , HIREDATE FROM EMP WHERE
+    HIREDATE BETWEEN '01-JAN-81' AND '30-JUN-81';
+6.  select * from emp order by hiredate asc;
+7.   select count (distinct job) from emp;
+8.  select min(sal), max(sal) from emp;
+9.  select sum(sal) from emp,dept where e.deptno = d.deptno 
+    and d.dname = 'SALES';
+10. select max(sal)-min(sal) from emp;
+11. select ename from emp where ename like '__A%' ;
+12. select count(*) from emp where sal > 2000;
+13. select count(*),sum (sal) from emp where job = 'SALESMAN';

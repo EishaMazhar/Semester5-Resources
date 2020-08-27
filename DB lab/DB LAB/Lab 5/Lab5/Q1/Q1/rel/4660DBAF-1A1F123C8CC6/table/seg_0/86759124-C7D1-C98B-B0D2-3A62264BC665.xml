@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="86759124-C7D1-C98B-B0D2-3A62264BC665" name="Section">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>9CEBB97E-BA23-CA17-0D64-FDEDB554FAEB</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Instructor" id="B27E0DA7-90A7-1633-F98A-81133E187942">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>5A29568C-5F4C-B1F1-C25A-C35F53B32BF9</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Semester" id="02F4A559-7ED9-09AC-E467-8FAAF16888F5">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>760A4878-1857-854D-73FC-392E410527B0</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Year" id="9E952FB3-E3AB-F5F4-4D4A-79CAC6AAFD49">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>B33E28FA-B884-4BAB-D9DC-A0C549F72B04</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Course" id="36CE52A1-595D-75EC-C980-66E359195B17">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>D8C7F072-C231-0780-30C7-4EBAA450BC88</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Section_No" id="39CDF40B-16A8-4BDB-D6F5-4B51D1415D72">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>C8EBAC01-E889-3216-5AD7-F84860B2E9C5</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Student_SSN" id="8DED2271-AC7D-1AB6-5363-51FCDDCCAE3D">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>FBB4EC2E-1656-EF89-8611-1C8D2D0F2C92</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E2CE1C3-18EA-03DB-3F7B-068DAE88B8BC" referredColumn="5B08A627-D7A1-E1E4-20E9-F82992E97B0A"/>
+</associations>
+</Column>
+<Column name="Student_Id" id="A4B28CF9-2108-8516-69EF-9ECFB89EE10C">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>148B1E3B-9D5C-DEDB-1045-BD163C4D81E7</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E2CE1C3-18EA-03DB-3F7B-068DAE88B8BC" referredColumn="F3E57D84-E98A-EF8A-7641-6C3676306918"/>
+</associations>
+</Column>
+<Column name="Section_ID" id="0D2CBBFF-D95A-D957-4F9C-C49587452FF9">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:25:00 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A7AC1CCC-0267-2B49-ECE5-E79F38027D88" name="Section_PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="0D2CBBFF-D95A-D957-4F9C-C49587452FF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1CAB255A-3D1B-ADEA-3D7D-E81AA80F5F8E" name="Section__IDX">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E33565F2-D871-B795-D9DA-45EF3389C530</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="8DED2271-AC7D-1AB6-5363-51FCDDCCAE3D"/>
+<colUsage columnID="A4B28CF9-2108-8516-69EF-9ECFB89EE10C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7F8A6E7-0D81-B70B-CFE7-64305B268602" name="Section_Student_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>E33565F2-D871-B795-D9DA-45EF3389C530</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8DED2271-AC7D-1AB6-5363-51FCDDCCAE3D"/>
+<colUsage columnID="A4B28CF9-2108-8516-69EF-9ECFB89EE10C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

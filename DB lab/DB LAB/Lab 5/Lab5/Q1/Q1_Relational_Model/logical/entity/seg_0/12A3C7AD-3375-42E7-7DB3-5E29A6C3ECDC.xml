@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="12A3C7AD-3375-42E7-7DB3-5E29A6C3ECDC" name="Course">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:12:45 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Name" id="60051875-C82D-45FB-92B7-5782ABD51231">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:12:59 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Description" id="A185DF82-B0D6-0754-8396-D3CD9629B6F8">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:13:07 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Course_No" id="435BB142-A49E-EB6B-FA50-777DC50F0727">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:13:43 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Semester_Hrs" id="30523C4A-35CB-798D-877E-C41A6FACECF1">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:14:12 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Level" id="06CBEC74-F34A-5759-3165-306B7AA7C51F">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:14:51 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Offering_Dept" id="23CB4F0A-8204-AE33-9853-A47555D71542">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:15:15 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SSN" id="ABBCE5E5-703D-E2F0-075A-76AEC4AC55E1">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:22:15 UTC</createdTime>
+<generatorID>83118D12-E49F-EBBE-577F-FE970557B2B2</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<referedAttribute>7CCDB23B-5D4A-7790-CCCA-04030927469A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id" id="EB232ED2-4C08-1E08-C9C1-EE0876AD7964">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:22:15 UTC</createdTime>
+<generatorID>83118D12-E49F-EBBE-577F-FE970557B2B2</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<referedAttribute>756F9604-D982-8C07-4682-0254722093BD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0DC278ED-4A4B-F964-8D08-C232BFB0A95E" name="Course PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:15:39 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>60051875-C82D-45FB-92B7-5782ABD51231</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

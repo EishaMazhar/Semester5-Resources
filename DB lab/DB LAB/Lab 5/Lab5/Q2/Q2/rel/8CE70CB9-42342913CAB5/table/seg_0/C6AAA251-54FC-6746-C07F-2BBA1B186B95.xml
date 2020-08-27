@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C6AAA251-54FC-6746-C07F-2BBA1B186B95" name="Orders">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>5659734D-B332-1A61-974B-EDD806021070</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="BEF66800-056A-C129-DC0F-4740153B872D">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>BE310A5C-D3D2-CE9D-5621-75977FA0ADBA</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Qty_of_parts" id="0F9636FD-2AAF-6174-63CD-770817155B55">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>C5744539-A825-B878-6CF3-7645C910BC41</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Received_Date" id="10AD70AC-633B-13FC-3AA0-35F92F176708">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>C1F47E39-DE18-E9EF-E147-C47799565773</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Shipped_Date" id="06DCE74B-197C-22AC-3262-8A365BC938B8">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>0BED2EDB-3B4E-8E27-B3E9-81AD19FC614E</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Employee_Id" id="62DAB337-4B9B-8C0B-923C-A570C48383B3">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>E6D48F8D-B1F6-7D86-0FA5-EBAA6BD7AF0C</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D17BA805-F802-7C77-2B83-3427518D5F3F" referredColumn="6FF3813B-C200-7175-29C8-519C1AD3D339"/>
+</associations>
+</Column>
+<Column name="Parts_Id" id="973D5221-3C44-F285-0598-D46611E6D15B">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>B8656C4D-D4EB-9298-AE21-BD98D4174E8D</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="072FAE9C-E601-4785-3C0A-A37E41E2855F" referredColumn="9838A582-6B05-1E1C-5C2B-B130C6145928"/>
+</associations>
+</Column>
+<Column name="Customer_Id" id="3EAEA8A5-1898-99EB-2D28-B0103DEEA767">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>5D739790-A1F5-E69A-4A3C-CB53CC68E387</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3A17349D-498D-DD05-5AA4-953E6096D4EC" referredColumn="083D4962-F653-3B9D-459A-7FC0641EA709"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D2F56DF3-3940-53BF-9F04-C5407B812E08" name="Orders_PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>8E68BB6D-254E-242B-BCA2-92B811B3F73A</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BEF66800-056A-C129-DC0F-4740153B872D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40145DE8-B5B9-C893-C5A3-AC4AC915B5D6" name="Orders_Parts_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>3B9120D5-5683-143C-763C-14315D8FD7F3</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="973D5221-3C44-F285-0598-D46611E6D15B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="387C9EB8-F859-9A76-5631-2061348DC83E" name="Orders_Employee_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>1EBA6202-2365-F439-780C-D6D49032A2FD</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62DAB337-4B9B-8C0B-923C-A570C48383B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F268900B-C29B-A66D-1F0C-A819D16CD571" name="Orders_Customer_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:57 UTC</createdTime>
+<generatorID>A289531C-1CCE-FB2E-832C-F1E5BE26019F</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EAEA8A5-1898-99EB-2D28-B0103DEEA767"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

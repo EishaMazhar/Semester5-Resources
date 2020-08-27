@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3836C19B-3D4B-A03E-0AFB-C700335ED183" name="Course">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>12A3C7AD-3375-42E7-7DB3-5E29A6C3ECDC</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Name" id="91220588-D51F-A5F8-1F7B-135EB0A730FB">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>60051875-C82D-45FB-92B7-5782ABD51231</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Description" id="F4DA8258-F6FB-1C2E-5F2B-5780BBE558E4">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>A185DF82-B0D6-0754-8396-D3CD9629B6F8</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Course_No" id="1EADD886-C45D-E236-6F8B-5A38DDCE6DF7">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>435BB142-A49E-EB6B-FA50-777DC50F0727</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Semester_Hrs" id="E622D2D9-CC01-428E-482B-A483235689D0">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>30523C4A-35CB-798D-877E-C41A6FACECF1</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Level" id="F6C55E06-AD2A-F6F4-88F4-B0F16FF35B31">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>06CBEC74-F34A-5759-3165-306B7AA7C51F</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Offering_Dept" id="2D714B7A-CA10-B9B7-DAE3-73FBC2F1D73F">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>23CB4F0A-8204-AE33-9853-A47555D71542</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Student_SSN" id="68AA8293-1A62-823F-0145-50D0D122BB23">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>ABBCE5E5-703D-E2F0-075A-76AEC4AC55E1</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A3C5BCF-28E2-F28C-5FFE-A90A377686DC" referredColumn="5B08A627-D7A1-E1E4-20E9-F82992E97B0A"/>
+</associations>
+</Column>
+<Column name="Student_Id" id="58A4D57F-3510-BC4A-696F-7FDEBA653125">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>EB232ED2-4C08-1E08-C9C1-EE0876AD7964</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A3C5BCF-28E2-F28C-5FFE-A90A377686DC" referredColumn="F3E57D84-E98A-EF8A-7641-6C3676306918"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AB7976A4-35F6-68ED-CF0B-E881E8A8FB9F" name="Course_PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>0DC278ED-4A4B-F964-8D08-C232BFB0A95E</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91220588-D51F-A5F8-1F7B-135EB0A730FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C23788FC-F049-4E30-080B-8F816A718359" name="Course_Student_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:59 UTC</createdTime>
+<generatorID>83118D12-E49F-EBBE-577F-FE970557B2B2</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="68AA8293-1A62-823F-0145-50D0D122BB23"/>
+<colUsage columnID="58A4D57F-3510-BC4A-696F-7FDEBA653125"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,146 @@
+
+
+Pros and Cons of Indexing
+
+definition and advantages of Stored Procedures(SP)
+
+What are constraints in database?
+
+How can I put a constraint that whenever some data is inserted in Table X than it should first check the insertion values based on some aggregate values from the
+tuples already in X. If the constraint is satisfied then insert it else don't insert it?
+
+Views
+
+stored procedures 
+
+function and procedures (benefits , diff ,bw them etc)
+
+ek table ko normalize krwaya final state me ,
+
+query chalani thi count ki , on normalized table jo kia tha
+
+join ki and cont ki query mila k chalani thi ek
+
+Circular dependence in database
+
+Why do we normalize database
+
+Types of normalization and definitions
+
+difference bw candidate key and unique key
+
+ERD bnao university, teacher, student, course relation define karo
+
+join kitny trah k hty hy?
+
+self join kia hta hy? example de skty hy self join ki?
+
+aik self join dia
+ID Name ManagerID
+1 Ali 2
+2 Iqbal NULL
+ismein Manager k name print kar k dou.
+
+upar jo erd bnai hy ismein s konse bachay ny sab s zayda course uthaye huay hy ?
+aur second highest kis ny courses liye huay name print karo.
+
+primary key kia hti hy?
+
+super key kia hti hy?
+
+composite key kia hti hy?
+
+kia foreign ki hamesha unique hgi?
+
+kia composite key hamesha unique hgi?
+
+kia normalization k koi drawback b hty hy?
+
+indexing kia hti hy? indexing kio use kartay hy? kitni trah ki hti hy?
+
+triggers kia hty hy?
+
+store procduere zayda efficient hy ya simple sql ki query?
+
+clustering ka concept hy kuch database mein?
+
+triggers and stored procedures
+
+Outer and Inner Join 
+
+Full Join
+
+Which join is fast and why ? 
+
+if primary key contain unique values to primary key kyun bane jab kai unique key hai to ? (B/c primary does not contain null values)
+
+Erd of scenerio (library sai related tha) and us par ek query)
+
+Humhare pas aik table tha hum har dafa 3 se 4 queries lkhte hain ismain magar aik querry nhi chali ab kya karen? database inconsistant hojaiga jab dobara chalo ge wohi queries? kaise masla hal hoga? 
+
+Commit kaha tumnai, roll back kaha, transaction kaha sabko explain karain
+
+Database schema banaya queries likhwaen 2 aik main join lag raha tha aik main nhi, phir is main se hi 4 scenarios diye our is main 4 result btane thai
+
+Inner join se
+left join 
+right join 
+full outer join
+cross join our outer join ka difference btao
+
+define entity, attribute, relationship
+
+types of relationships explain all
+
+ERD of flight schedule system, passengers, flights un ki bookings wagaira, seats arival departure etc
+
+sql query for no of passengers everyday in a single flight
+duration of flights
+passengers travelling from one country to another
+
+What is DML AND DDL?
+
+What are commands in sql ? Like Insert 
+
+In which we do autocommit and manual commit ? DDL or DML?
+
+Character Functions  -(Why to use)
+
+Conversion functions
+
+Aggregrate Functions ? what are they?
+
+What is PL/SQL?
+
+What is SQL?
+
+Write a query to retrieve last two rows of the table.
+
+What are anomalies??
+
+1:m relationship and foreign key
+
+m:m relationship and how many tables and why?
+
+what is composite key?
+
+what are Outer Joins? left join? right join
+
+when Outer joins exists so whats the purpose of inner joins? what is the difference b/w them
+
+What is self join? examples?
+
+what is stored procedure and what are its advantages
+
+What is views and when to use it?
+
+Differences between procedure and function
+
+Can Foreign Key be NULL.
+
+Why do we need to de-normalization
+
+Make Library Database System, with two tables, (student and books) and query it using join
+
+
+

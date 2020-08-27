@@ -1,0 +1,130 @@
+--Database Mid-1(Script-A)
+
+drop table Musician;
+drop table Place;
+drop table Performer;
+drop table Concert;
+
+--Creating tables:
+create table Place(
+place_no number(2) primary key,
+place_town varchar2(30),
+place_country varchar2(30)
+
+);
+
+create table Musician(
+m_no number(2) primary key,
+m_name varchar2(25),
+born date,
+died date,
+born_in number(2),
+living_in number(2),
+CONSTRAINT Musician_pmfk_1 FOREIGN KEY (born_in) REFERENCES Place(place_no),
+CONSTRAINT Musician_pmfk_2 FOREIGN KEY (living_in) REFERENCES Place(place_no)
+);
+
+create table Performer(
+perf_no number(2) primary key,
+perf_is number(2),
+instrument varchar2(30),
+perf_type varchar2(30),
+CONSTRAINT Performer_pmfk_1 FOREIGN KEY (perf_is) REFERENCES Musician(m_no)
+);
+
+
+create table Concert(
+concert_no number(2) primary key,
+concert_venue varchar2(35),
+concert_in number(2),
+orgnizer number(2),
+CONSTRAINT Concert_cmfk_1 FOREIGN KEY (orgnizer) REFERENCES Musician (m_no),
+CONSTRAINT Concert_pcfk_2 FOREIGN KEY (concert_in) REFERENCES Place(place_no)
+);
+
+--inserting data in Place table:
+
+
+insert into Place values(1,'Manchester','England');
+insert into Place values(2,'Edinburgh','Scotland');
+insert into Place values(3,'Salzburg','Austria');
+insert into Place values(4,'New York','USA');
+insert into Place values(5,'Birmingham','England');
+insert into Place values(6,'Glasgow','Scotland');
+insert into Place values(7,'London','England');
+insert into Place values(8,'Chicago','USA');
+insert into Place values(9,'Amsterdam','Netherlands');
+
+--inserting data in Musician table:
+
+
+insert into Musician values(1,'Fred Bloggs',to_date('03/03/1987','dd/mm/yyyy'),to_date('16/06/2008','dd/mm/yyyy'),1,2);
+insert into Musician values(2,'John Smith',to_date('06/05/1989','dd/mm/yyyy'),NULL,3,4);
+insert into Musician values(3,'Helen Smyth',to_date('07/06/1982','dd/mm/yyyy'),NULL,4,5);
+insert into Musician values(4,'Harriet Smithson',to_date('22/03/1996','dd/mm/yyyy'),NULL,5,6);
+insert into Musician values(5,'James First',to_date('09/07/1994','dd/mm/yyyy'),NULL,7,7);
+insert into Musician values(6,'Theo Mengel',to_date('16/12/1984','dd/mm/yyyy'),to_date('12/09/2010','dd/mm/yyyy'),7,1);
+insert into Musician values(7,'Sue Little',to_date('17/06/1992','dd/mm/yyyy'),NULL,8,9);
+insert into Musician values(8,'Harry Forte',to_date('18/04/1993','dd/mm/yyyy'),NULL,1,8);
+insert into Musician values(9,'Phil Hot',to_date('23/05/1997','dd/mm/yyyy'),NULL,2,7);
+insert into Musician values(10,'Jeff Dawn',to_date('15/06/1998','dd/mm/yyyy'),NULL,5,4);
+insert into Musician values(11,'Rose Spring',to_date('07/09/1989','dd/mm/yyyy'),NULL,4,5);
+insert into Musician values(12,'Davis Heavan',to_date('05/02/1987','dd/mm/yyyy'),NULL,5,4);
+insert into Musician values(13,'Lovely Time',to_date('08/01/1990','dd/mm/yyyy'),NULL,6,3);
+insert into Musician values(14,'Alan Fluff',to_date('12/03/1991','dd/mm/yyyy'),NULL,7,2);
+insert into Musician values(15,'Tony Smythe',to_date('09/05/1984','dd/mm/yyyy'),NULL,8,1);
+insert into Musician values(16,'James Quick',to_date('10/03/1997','dd/mm/yyyy'),NULL,9,2);
+insert into Musician values(17,'Freda Miles',to_date('16/08/1984','dd/mm/yyyy'),to_date('06/03/2015','dd/mm/yyyy'),9,3);
+insert into Musician values(18,'Elsie James',to_date('14/05/1996','dd/mm/yyyy'),NULL,8,5);
+insert into Musician values(19,'Andy Jones',to_date('04/03/1984','dd/mm/yyyy'),NULL,7,6);
+insert into Musician values(20,'Louise Simpson',to_date('07/06/1984','dd/mm/yyyy'),NULL,6,6);
+insert into Musician values(21,'James Steeple',to_date('03/03/1994','dd/mm/yyyy'),NULL,5,6);
+insert into Musician values(22,'Steven Chaytors',to_date('04/03/1984','dd/mm/yyyy'),NULL,6,7);
+
+
+--inserting data in Performer table:
+
+
+insert into Performer values(1,2,'Violin','classical');
+insert into Performer values(2,4,'Viola','Classical');
+insert into Performer values(3,6,'Banjo','Jazz');
+insert into Performer values(4,8,'Violin','Classical');
+insert into Performer values(5,12,'Guitar','Jazz');
+insert into Performer values(6,14,'Violin','Classical');
+insert into Performer values(7,16,'Trumpet','Jazz');
+insert into Performer values(8,18,'Viola','Classical');
+insert into Performer values(9,20,'Bass','Jazz');
+insert into Performer values(10,2,'Flute','Jazz');
+insert into Performer values(11,20,'Cornet','Jazz');
+insert into Performer values(12,6,'Violin','Jazz');
+insert into Performer values(13,8,'Drums','Jazz');
+insert into Performer values(14,10,'Violin','Classical');
+insert into Performer values(15,12,'Violin','Classical');
+insert into Performer values(16,14,'Cello','Classical');
+insert into Performer values(17,16,'Viola','Classical');
+insert into Performer values(18,18,'Flute','Jazz');
+insert into Performer values(19,20,'Guitar',NULL);
+insert into Performer values(20,3,'Trombone','Jazz');
+insert into Performer values(21,5,'Horn','Jazz');
+insert into Performer values(22,7,'Violin','Jazz');
+insert into Performer values(23,2,'Cello','Jazz');
+insert into Performer values(24,4,'Bass','Jazz');
+insert into Performer values(25,6,'Violin','Jazz');
+insert into Performer values(26,8,'Drums','Classical');
+insert into Performer values(27,10,'Clarinet','Classical');
+insert into Performer values(28,12,'Bass','Classical');
+insert into Performer values(29,18,'Viola','Classical');
+
+
+--inserting data in Concert table:
+
+insert into Concert values(1,'Bridgewater Hall',1,21);
+insert into Concert values(2,'Bridgewater Hall',1,3);
+insert into Concert values(3,'Usher Hall',2,3);
+insert into Concert values(4,'Assembly Rooms',2,21);
+insert into Concert values(5,'Festspiel Haus',3,8);
+insert into Concert values(6,'Royal Albert Hall',7,8);
+insert into Concert values(7,'Concertgebouw',9,8);
+insert into Concert values(8,'Metropolitan',4,21);
+
+--end

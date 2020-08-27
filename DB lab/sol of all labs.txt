@@ -1,0 +1,428 @@
+LAB 1 SOLUTION
+
+1)select ENAME , JOB, SAL from hr.EMP where ((JOB = 'CLERK' or JOB = 'ANALYST') AND (SAL <> 1000 and SAL <> 3000 and SAL <> 5000))  
+
+2)select * from hr.EMP order by SAL
+
+3)select avg(SAL) from hr.EMP
+
+4)select ENAME , DEPTNO , HIREDATE from hr.EMP order by deptno asc , hiredate desc
+
+5)select empno,ename,sal,hiredate from hr.EMP where HIREDATE between '01-JAN-81' AND '29-JUN-81'
+
+6)select empno,ename,sal,hiredate from hr.EMP where HIREDATE between '01-JAN-81' AND '29-JUN-81' order by HIREDATE
+
+7)select count(*)  from hr.EMP 
+
+8)select min(SAL) , max(SAL)from hr.EMP;
+
+9)select sum(SAL) from hr.EMP where DEPTNO=30;
+
+10)select max(SAL) - min(SAL) from hr.EMP
+
+11)select * from hr.EMP where ENAME LIKE '__A%';
+
+12)select count(*)from hr.EMP where SAL>2000
+
+13)select count(*),sum(SAL) from hr.EMP
+
+
+Lab 2 solution
+
+
+1)select initcap(ENAME) , lower(JOB)from hr.EMP
+
+2)select EMPNO,upper(ENAME),DEPTNO from hr.EMP
+
+3)select EMPNO,
+
+4)select ENAME , JOB , SAL * 12 from hr.EMP
+
+5)select * from hr.EMP order by SAL
+
+6)select lpad(SAL,5,'$') from hr.EMP where ENAME = 'SCOTT';
+
+7)select * from hr.EMP where(( SAL / 30)>100)
+
+8)select EMPNO,ENAME,SAL,SAL+(SAL/100*15),(SAL/100*15)-SAL from hr.EMP
+
+9)SELECT ENAME, COMM((NVL((null), 'No Commission'))),COMM FROM hr.EMP; ghalat
+
+10)select ENAME,HIREDATE,TO_CHAR(HIREDATE,'DAY')as day from hr.EMP
+
+11)select initcap(lower(ENAME)),length(ENAME)from hr.EMP where ENAME like 'L%' or ENAME like 'A%' or ENAME like 'M%'; 
+
+12)select
+
+13)select SUM(SAL)"total salary to be paid" from hr.EMP;
+
+14)select DEPTNO,count(*) from hr.EMP group by DEPTNO
+
+15)select DEPTNO , max(SAL) from hr.EMP where SAL > 2900 group by DEPTNO  
+
+16)select DEPTNO ,count(*) from hr.EMP group by DEPTNO having count(*) > 3;
+
+
+LAB3 SOLUTION
+
+
+LAB 3
+
+CREATE TABLE haris(
+nic varchar(20) not null,
+hname varchar(20) not null,
+phone_num number,
+address varchar2(50),
+primary key (nic)
+);
+
+insert into haris values(1230373,'esd',43145697,'fehfabbgyyft','BHUYR');
+select * from hr.haris
+
+ALTER TABLE haris
+add office varchar2(50);
+
+CREATE TABLE Faculty(
+Faculty_Id int,
+Last_Name varchar2(15),
+First_Name varchar2(15),
+Dept char(3),
+primary key (Faculty_Id)
+);
+
+
+CREATE TABLE Department (
+Dept_Code char(3) not null,
+Dept_Name Varchar2(20) not null,
+primary key (Dept_Code)
+);
+
+ALTER TABLE Department
+add Location char(7);
+
+ALTER TABLE Faculty
+add faculty_dept_fk char(3);
+add foreign key(faculty_dept_fk) REFERENCES Department(Dept_Code);
+
+ALTER TABLE Faculty
+modify Last_Name varchar(25);
+
+
+CREATE TABLE BOOK(
+BookId int not null,
+Title varchar(20),
+PublisherName varchar(20) not null,
+primary key(BookId)
+);
+
+CREATE TABLE BOOK_AUTHORS(
+BookId int ,
+AuthorName varchar(20) not null,
+foreign key (BookId) REFERENCES BOOK(BookId)
+);
+
+CREATE TABLE PUBLISHER(
+Name varchar(20),
+Address varchar2(50),
+Phone int ,
+foreign key(Name) references BOOK(PublisherName)
+);
+
+CREATE TABLE BOOK_COPIES(
+BookId int,
+BranchId int not null,
+No_Of_Copies int ,
+primary key(BranchId),
+foreign key (BookId) references BOOK(BookId)
+);
+create table LIBRARY_BRANCH(
+BranchId int not null,
+BranchName varchar(30),
+Address varchar(20),
+primary key (BranchId)
+):
+
+create table BORROWER(
+CardNo in not null,
+name varchar(20),
+address varchar(20),
+Phone number,
+primary key (CardNo)
+):
+
+create table BOOK_LOANS(
+BookId int ,
+BranchId int,
+CardNo int,
+DateOut varchar(20),
+DueDate varchar(20),
+foreign key (BranchId) references LIBRARY_BRANCH(BranchId),
+foreign  key(CardNo) references BORROWER(CardNo),
+foreign key (BookId) references BOOK(BookId)
+);
+
+
+
+LAB 4 SOLUTION
+
+
+SELECT ENAME ,JOB, DNAME SAL,GRADE FROM EMP natural JOIN DEPT ,SALGRADE  ORDER BY DEPTNO ;
+
+select DNAME from DEPT where DEPTNO IN (select DEPTNO from hr.EMP group by DEPTNO having count(*) > 2);
+
+select * from hr.EMP where sal in (select min(SAL) from hr.EMP group by DEPTNO)
+
+select deptno,DNAME from hr.DEPT where DEPTNO not IN 
+(select DEPTNO from hr.EMP )
+
+select ENAME,SAL,DNAME from EMP  left outer join DEPT on
+(EMP.DEPTNO=DEPT.DEPTNO)
+
+select ENAME,JOB,(SAL*12),DNAME from HR.EMP natural join DEPT,SALGRADE
+where SAL not between LOSAL AND HISAL AND grade=4
+
+select ENAME,JOB,(SAL*12),DEPTNO,DNAME,GRADE from hr.EMP natural join
+DEPT,SALGRADE where SAL BETWEEN LOSAL AND HISAL AND(((SAL*12)>=60000) AND (JOB <>'ANALYST'))
+
+select ENAME,SAL,DNAME from hr.EMP natural join DEPT,SALGRADE
+where SAL between LOSAL AND HISAL AND (GRADE=2);
+
+select ENAME,JOB,DNAME,SAL,GRADE from hr.EMP natural join DEPT,
+SALGRADE order by DNAME ;
+
+select * from hr.EMP where  DEPTNO = 10 AND SAL >
+(select max(SAL) from hr.EMP group by DEPTNO HAVING DEPTNO=30) 
+
+select * from hr.EMP where DEPTNO <> 30 AND SAL >
+(select max(SAL) from hr.EMP where DEPTNO = 30 )
+
+select DNAME from hr.DEPT where DEPTNO not in(select DEPTNO from hr.EMP);
+
+select ENAME,DEPTNO,SAL from hr.EMP  where (DEPTNO,SAL)IN
+(select DEPTNO,SAL from hr.EMP where COMM IS NOT NULL);
+
+select ENAME,SAL from hr.EMP where sal=(select max(sal) from hr.EMP where sal<> (select max(sal) from hr.EMP)  )
+
+
+LAB 6 SOLUTION
+
+
+DECLARE
+num1 INTEGER;
+num2 integer;
+num3 integer ;
+
+begin
+num1:=&num1;
+num2:=&num2;
+num3:= num1 + num2;
+DBMS_OUTPUT.PUT_LINE('the sum is '||num3);
+end;
+
+DECLARE
+lb INTEGER;
+hb INTEGER;
+sum1 INTEGER;
+I INTEGER;
+BEGIN
+
+lb:=&lb;
+hb:=&lb;
+I:= lb;
+FOR I IN LB..HB LOOP
+sum1:= sum1+I;
+end loop;
+dbms_output.put_line(sum1);
+end;
+
+DECLARE
+NAAME EMP.ENAME %TYPE;
+DAATE EMP.HIREDATE %TYPE;
+DN DEPT.DNAME %TYPE;
+ENO EMP.EMPNO %TYPE;
+BEGIN
+ENO:=&ENO;
+SELECT ENAME,HIREDATE,DNAME INTO NAAME,DAATE,DN FROM EMP
+NATURAL JOIN DEPT WHERE EMPNO=ENO;
+DBMS_OUTPUT.PUT_LINE(NAAME||' '||DAATE || ' '||DN);
+EXCEPTION
+WHEN NO_DATA_FOUND
+THEN DBMS_OUTPUT.PUT_LINE('NO RECORD FOUND');
+END;
+
+DECLARE
+NUM11 NUMBER;
+REV NUMBER:=0;
+VAL NUMBER;
+
+BEGIN
+NUM11:=&NUM11;
+VAL:=NUM11;
+WHILE NUM11 > 0 LOOP
+REV := (REV*10)+(MOD(NUM11,10));
+NUM11:=TRUNC( NUM11/10);
+END LOOP;
+IF VAL!=REV THEN
+DBMS_OUTPUT.PUT_LINE('NUMBER IS NOT PALINDROME ');
+ELSE
+DBMS_OUTPUT.PUT_LINE('NUMBER IS PALINDROME ');
+END IF;
+END;
+
+DECLARE
+empno EMP.EMPNO%TYPE :='&ENO';
+ename EMP.ENAME%TYPE :='&NAME';
+job EMP.JOB%TYPE :='&JOBS';
+sal EMP.SAL%TYPE :='&SALA';
+
+BEGIN
+INSERT INTO EMP(EMPNO,ENAME,JOB,SAL)
+VALUES(empno,ename,job,sal);
+END;
+
+SELECT * FROM HR.EMP
+
+declare
+sum1 integer:=0;
+i integer;
+begin
+for i in 1..100 loop
+sum1:=sum1+i;
+end loop;
+dbms_output.put_line('the sum is'|| sum1);
+end;
+select * from hr.DEPT
+create view ACC_DEPT AS
+select * from hr.EMP natural join DEPT where DNAME='ACCOUNTING';
+
+SELECT * FROM ACC_DEPT
+
+
+CREATE OR REPLACE PROCEDURE add1
+IS
+
+X1 INTEGER:=10;
+X2 INTEGER:=25;
+X3 INTEGER:=0;
+BEGIN
+X3:=X1+X2;
+dbms_output.put_line('THE SUM IS '|| X3);
+END;
+
+create or replace procedure abx
+is
+a integer:=2;
+b integer :=3;
+c integer :=0;
+begin
+c:=a+b;
+dbms_output.put_line(c);
+end;
+
+exec add1
+
+
+declare
+V_name varchar(20);
+cursor cur_emp is select ename from hr.EMP
+where empno>1050;
+begin
+open cur_emp;
+loop
+fetch cur_emp into V_name;
+dbms_output.put_line(V_name);
+exit when cur_emp%NOTFOUND;
+end loop;
+close cur_emp;
+end;
+
+declare
+cname EMP%ROWTYPE;
+job varchar(10);
+cursor cur_emp1 is select * from hr.EMP 
+where SAL>2000;
+
+begin
+open cur_emp1;
+loop 
+fetch cur_emp1 into cname;
+dbms_output.put_line(cname.ENAME|| ' '|| cname.JOB||' ' || cname.SAL);
+exit when cur_emp1%NOTFOUND;
+end loop;
+close cur_emp1;
+end;
+
+declare 
+i integer;
+info EMP%ROWTYPE;
+cursor cur_emp2 is select * from hr.EMP;
+begin
+open cur_emp2;
+loop
+fetch cur_emp2 into info;
+DBMS_OUTPUT.PUT_LINE(info.ename||' '||info.job||' ' ||info.SAL||' ' ||info.COMM);
+exit when cur_emp2%ROWCOUNT=10;
+end loop;
+close cur_emp2;
+end;
+
+ASSIGMENT SOL
+
+select upper(M_NAME),(TO_CHAR(SYSDATE,'YYYY')-TO_CHAR(BORN,'YYYY'))as age
+from hr.Musician where DIED is not null
+
+select M_NAME from hr.Musician where M_NO not in(select ORGNIZER from hr.Concert);
+
+--List the different instruments (irrespective of their type)
+--played by the musicians, order your result in ascending. 
+select distinct(INSTRUMENT)from Performer order by instrument
+
+--Give the organizer’s name of the concert in the Bridgewater Hall (England
+
+select M_NAME from Musician where m_no in 
+(select orgnizer from Concert where CONCERT_VENUE='Bridgewater Hall')
+
+--List the name and town of birth of any performer 
+--born in the same city as James First
+
+select m_name,place_town from Musician natural join Place
+where musician.born_in=place.place_no and place.place_town='London';
+
+--Display id and number of instruments of the performer who played at
+--least Two instruments, order the result by number of instruments then by id
+
+select perf_is ,count(instrument) from performer group by perf_is 
+having count(instrument)>1 order by count(instrument),perf_is 
+
+--Display musician who both perform as well as organize
+
+select * from Musician where M_NO in(select perf_is from Performer)
+INTERSECT 
+select * from Musician where M_NO in(select orgnizer from Concert)
+
+--Find all the performers who played guitar or violin and were born 
+--in Manchester (England).
+
+select * from Performer where instrument in ('Guitat' , 'Violin') 
+
+
+
+--List name of all musicians who were born as well as living at the same place
+
+select m_name from Musician where born_in = living_in
+
+
+--List the names, dates of birth and the instrument played of living musicians 
+--who play an instrument which Theo also plays
+
+select m_name,born,instrument from Musician natural join Performer
+where perf_is=m_no AND died is null and instrument IN
+(select instrument from performer natural join Musician
+where perf_is=m_no and m_name like 'Theo%' )
+
+--Show the id and count of instrument played by the performer
+--who played the most number of instruments
+
+
+select perf_is,count(*)from Performer group by perf_is having count(*)=
+(select max(count_ins)from(select count(instrument)as count_ins from Performer group by perf_is))

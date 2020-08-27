@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6B281198-9E44-A346-0F05-CF671197D4F9" name="Entity_5">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>71FE5D8E-A705-CC3D-7246-3E4ABA1286EE</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="transaction_id" id="EFF226C8-58D4-0BF4-DBBB-F79A50C7E90E">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>E15F71B1-D9A2-6996-6230-2E325603F86D</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>16EF3861-F3C7-F4E4-8796-35225D413C4D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="transaction_date" id="A3A517DC-EA42-4AB2-2E96-A0B8940A3821">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>B5B12036-DBF5-201C-6F40-11D30FB65BDF</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Entity_1_book_id" id="31113D9D-A083-5B2A-BE29-85B998F7BFD5">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>6450BD75-8180-CB18-1F91-5025B30E18A9</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E125FB1E-78FA-D4D1-9357-2B9374E9EC33" referredColumn="AF2D86B2-6D5D-C9FD-114A-BF6C0D819438"/>
+</associations>
+</Column>
+<Column name="Entity_4_Entity_4_ID" id="BFED2598-F040-09AE-9793-4EFCE86A1C12">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EF0EEA68-6A40-460D-FD25-DEBA9ED56EB2" referredColumn="27909FAC-D695-69ED-39AC-AB4F2337F23C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="138F3AB8-9533-74B7-A5D6-E061F4CD3D7F" name="Entity_5_PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>8DB6E496-3DE7-B36E-F039-A30E4537AADC</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EFF226C8-58D4-0BF4-DBBB-F79A50C7E90E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D70D266-A5BE-D4A6-5F07-2D2CAEF16B7C" name="Entity_5_Entity_1_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>82059178-B8A1-8B41-3144-FB7FBD0FAB74</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31113D9D-A083-5B2A-BE29-85B998F7BFD5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5537B9CE-5EC3-2405-AE4A-DCE084091ADA" name="Entity_5_Entity_4_FK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>9259DEAD-6635-4BB9-C9C2-8DFB29B7684F</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BFED2598-F040-09AE-9793-4EFCE86A1C12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

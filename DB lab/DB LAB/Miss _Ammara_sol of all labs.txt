@@ -1,0 +1,178 @@
+LAB 1 SOLUTION
+
+1)select ENAME , JOB, SAL from hr.EMP where ((JOB = 'CLERK' or JOB = 'ANALYST') AND (SAL <> 1000 and SAL <> 3000 and SAL <> 5000))  
+
+2)select * from hr.EMP order by SAL
+
+3)select avg(SAL) from hr.EMP
+
+4)select ENAME , DEPTNO , HIREDATE from hr.EMP order by deptno asc , hiredate desc
+
+5)select empno,ename,sal,hiredate from hr.EMP where HIREDATE between '01-JAN-81' AND '29-JUN-81'
+
+6)select empno,ename,sal,hiredate from hr.EMP where HIREDATE between '01-JAN-81' AND '29-JUN-81' order by HIREDATE
+
+7)select count(*)  from hr.EMP 
+
+8)select min(SAL) , max(SAL)from hr.EMP;
+
+9)select sum(SAL) from hr.EMP where DEPTNO=30;
+
+10)select max(SAL) - min(SAL) from hr.EMP
+
+11)select * from hr.EMP where ENAME LIKE '__A%';
+
+12)select count(*)from hr.EMP where SAL>2000
+
+13)select count(*),sum(SAL) from hr.EMP
+
+
+Lab 2 solution
+
+
+1)select initcap(ENAME) , lower(JOB)from hr.EMP
+
+2)select EMPNO,upper(ENAME),DEPTNO from hr.EMP
+
+3)select EMPNO,
+
+4)select ENAME , JOB , SAL * 12 from hr.EMP
+
+5)select * from hr.EMP order by SAL
+
+6)select lpad(SAL,5,'$') from hr.EMP where ENAME = 'SCOTT';
+
+7)select * from hr.EMP where(( SAL / 30)>100)
+
+8)select EMPNO,ENAME,SAL,SAL+(SAL/100*15),(SAL/100*15)-SAL from hr.EMP
+
+9)SELECT ENAME, COMM((NVL((null), 'No Commission'))),COMM FROM hr.EMP; ghalat
+
+10)select ENAME,HIREDATE,TO_CHAR(HIREDATE,'DAY')as day from hr.EMP
+
+11)select initcap(lower(ENAME)),length(ENAME)from hr.EMP where ENAME like 'L%' or ENAME like 'A%' or ENAME like 'M%'; 
+
+12)select
+
+13)select SUM(SAL)"total salary to be paid" from hr.EMP;
+
+14)select DEPTNO,count(*) from hr.EMP group by DEPTNO
+
+15)select DEPTNO , max(SAL) from hr.EMP where SAL > 2900 group by DEPTNO  
+
+16)select DEPTNO ,count(*) from hr.EMP group by DEPTNO having count(*) > 3;
+
+
+LAB3 SOLUTION
+
+
+LAB 3
+
+CREATE TABLE haris(
+nic varchar(20) not null,
+hname varchar(20) not null,
+phone_num number,
+address varchar2(50),
+primary key (nic)
+);
+
+insert into haris values(1230373,'esd',43145697,'fehfabbgyyft','BHUYR');
+select * from hr.haris
+
+ALTER TABLE haris
+add office varchar2(50);
+
+CREATE TABLE Faculty(
+Faculty_Id int,
+Last_Name varchar2(15),
+First_Name varchar2(15),
+Dept char(3),
+primary key (Faculty_Id)
+);
+
+
+CREATE TABLE Department (
+Dept_Code char(3) not null,
+Dept_Name Varchar2(20) not null,
+primary key (Dept_Code)
+);
+
+ALTER TABLE Department
+add Location char(7);
+
+ALTER TABLE Faculty
+add faculty_dept_fk char(3);
+add foreign key(faculty_dept_fk) REFERENCES Department(Dept_Code);
+
+ALTER TABLE Faculty
+modify Last_Name varchar(25);
+
+
+CREATE TABLE BOOK(
+BookId int not null,
+Title varchar(20),
+PublisherName varchar(20) not null,
+primary key(BookId)
+);
+
+CREATE TABLE BOOK_AUTHORS(
+BookId int ,
+AuthorName varchar(20) not null,
+foreign key (BookId) REFERENCES BOOK(BookId)
+);
+
+CREATE TABLE PUBLISHER(
+Name varchar(20),
+Address varchar2(50),
+Phone int ,
+foreign key(Name) references BOOK(PublisherName)
+);
+
+CREATE TABLE BOOK_COPIES(
+BookId int,
+BranchId int not null,
+No_Of_Copies int ,
+primary key(BranchId),
+foreign key (BookId) references BOOK(BookId)
+);
+
+
+LAB 4 SOLUTION
+
+
+SELECT ENAME ,JOB, DNAME SAL,GRADE FROM EMP natural JOIN DEPT ,SALGRADE  ORDER BY DEPTNO ;
+
+select DNAME from DEPT where DEPTNO IN (select DEPTNO from hr.EMP group by DEPTNO having count(*) > 2);
+
+select * from hr.EMP where sal in (select min(SAL) from hr.EMP group by DEPTNO)
+
+select deptno,DNAME from hr.DEPT where DEPTNO not IN 
+(select DEPTNO from hr.EMP )
+
+select ENAME,SAL,DNAME from EMP  left outer join DEPT on
+(EMP.DEPTNO=DEPT.DEPTNO)
+
+select ENAME,JOB,(SAL*12),DNAME from HR.EMP natural join DEPT,SALGRADE
+where SAL not between LOSAL AND HISAL AND grade=4
+
+select ENAME,JOB,(SAL*12),DEPTNO,DNAME,GRADE from hr.EMP natural join
+DEPT,SALGRADE where SAL BETWEEN LOSAL AND HISAL AND(((SAL*12)>=60000) AND (JOB <>'ANALYST'))
+
+select ENAME,SAL,DNAME from hr.EMP natural join DEPT,SALGRADE
+where SAL between LOSAL AND HISAL AND (GRADE=2);
+
+select ENAME,JOB,DNAME,SAL,GRADE from hr.EMP natural join DEPT,
+SALGRADE order by DNAME ;
+
+select * from hr.EMP where  DEPTNO = 10 AND SAL >
+(select max(SAL) from hr.EMP group by DEPTNO HAVING DEPTNO=30) 
+
+select * from hr.EMP where DEPTNO <> 30 AND SAL >
+(select max(SAL) from hr.EMP where DEPTNO = 30 )
+
+select DNAME from hr.DEPT where DEPTNO not in(select DEPTNO from hr.EMP);
+
+select ENAME,DEPTNO,SAL from hr.EMP  where (DEPTNO,SAL)IN
+(select DEPTNO,SAL from hr.EMP where COMM IS NOT NULL);
+
+select ENAME,SAL from hr.EMP where sal=(select max(sal) from hr.EMP where sal<> (select max(sal) from hr.EMP)  )

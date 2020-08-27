@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Patrons" directorySegmentName="seg_0" id="B961B611-8ACA-1825-B26D-69412420B477">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Entity_4_ID" id="27909FAC-D695-69ED-39AC-AB4F2337F23C">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="id" id="A0C9A38F-8CB0-B6C1-E31C-AD028644FFAA">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="address" id="BD3AE7FE-B8FB-047F-75B4-DA5BE37DFC54">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Entity_4_PK" id="FA9E80CC-55DA-9AFF-2BDE-5B76D324C52F">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:29:45 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

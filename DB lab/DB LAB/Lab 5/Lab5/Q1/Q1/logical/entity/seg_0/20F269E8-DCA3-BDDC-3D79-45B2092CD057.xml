@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="20F269E8-DCA3-BDDC-3D79-45B2092CD057" name="Grade_Report">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:17:48 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Student_name" id="97B556AB-FEB8-EE0E-EE2D-346AD99D7513">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:18:02 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Section_NO" id="15D2996E-A606-9F2C-839A-877D9E7144E7">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:18:14 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Letter_Grade" id="85CCA172-E6E6-4C9C-9616-A0E485F43B1A">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:18:25 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NUM_Grade" id="7923B0A2-30DC-EE4B-24B7-D912E4899103">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:18:39 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>4</endValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="SSN" id="08EB7B97-7C37-B80A-626B-620D045B520F">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:07 UTC</createdTime>
+<generatorID>2B701325-5D75-B61C-BC40-D0D50F450CE5</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<referedAttribute>7CCDB23B-5D4A-7790-CCCA-04030927469A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id" id="56F709CB-7730-91F3-23F6-B061EE784D97">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:24:07 UTC</createdTime>
+<generatorID>2B701325-5D75-B61C-BC40-D0D50F450CE5</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<referedAttribute>756F9604-D982-8C07-4682-0254722093BD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

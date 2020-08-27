@@ -1,0 +1,151 @@
+drop table Schedule;
+drop table Cinema_Type;
+drop table Staff;
+drop table Branch;
+drop table Movies;
+
+
+create table Movies (
+	movie_num number primary key,
+	movie_name varchar(30),
+	genre varchar(30),
+	language varchar(30),
+	duration_hours number
+	);
+
+create table Branch (
+	branch_id number primary key,
+	location varchar(30),
+	owner varchar(30)
+	);
+
+create table Cinema_Type (
+	type_id number primary key,
+	type_name varchar(30),
+	price number,
+	branch_id number,
+	foreign key(branch_id) references Branch
+	);
+	
+create table Staff (
+	Staff_id number primary key,
+	Staff_name varchar(30),
+	age number,
+	branch_id number,
+	foreign key(branch_id) references Branch
+	);
+
+create table Schedule (
+	movie_num number,
+	type_id number,
+	Staff_id number,
+	primary key(movie_num,type_id,Staff_id),
+	foreign key(movie_num) references Movies,
+	foreign key(type_id) references Cinema_Type,
+	foreign key(Staff_id) references Staff
+	);
+
+insert into Movies values ( 1, 'Sultan' ,'Action' , 'Hindi', 2.5 ) ;
+insert into Movies values ( 2, 'Bahubali' , 'Action' , 'Hindi' , 2 ) ;
+insert into Movies values ( 3, '3 idiots' , 'Comedy' , 'Hindi' , 3 ) ;
+insert into Movies values ( 4, 'Parwaz hai Junoon' , 'Thriller' , 'Urdu' , 2 ) ;
+insert into Movies values ( 5, 'Inception' , 'Thriller' , 'English', 3 ) ;
+insert into Movies values ( 6, 'Avengers' , 'Fiction' , 'English' , 2 ) ;
+insert into Movies values ( 7, 'Wonder Woman' , 'Fiction' , 'English' , 2.5 ) ;
+insert into Movies values ( 8, 'Teefa in Trouble' , 'Comedy' , 'Urdu' , 2 ) ;
+insert into Movies values ( 9, 'Actor in Law' , 'Comedy' , 'Urdu' , 3 ) ;
+insert into Movies values ( 10, 'Maalik' , 'Thriller' , 'Urdu' , 2 ) ;
+insert into Movies values ( 11, 'Sanju' , 'Drama' , 'Hindi' , 2.5 ) ;
+insert into Movies values ( 12, 'Sui Dhaaga' , 'Drama' , 'Hindi' , 2 ) ;
+insert into Movies values ( 13, 'Herapheri' , 'Comedy' , 'Hindi' , 3 ) ;
+insert into Movies values ( 14, 'Golmaal' , 'Comedy' , 'Hindi' , 2 ) ;
+insert into Movies values ( 15, 'Black Panther' , 'Fiction' , 'English' , 3 ) ;
+
+
+insert into Branch values ( 1 , 'Karachi' , 'Mr. Jasani');
+insert into Branch values ( 2 , 'Lahore' , 'Mr. Umair');
+insert into Branch values ( 3 , 'Islamabad' , 'Mr. Ali');
+insert into Branch values ( 4 , 'Hyderabad' , 'Mr. Yousuf');
+insert into Branch values ( 5 , 'Multan' , 'Ms. Kashaf');
+insert into Branch values ( 6 , 'Rawalpindi' , 'Mr. Amin');
+
+
+insert into Cinema_Type values ( 1, 'Platinum' , 500 , 1 );
+insert into Cinema_Type values ( 2, 'Gold' , 400 , 1 );
+insert into Cinema_Type values ( 3, 'Silver' , 300 , 1 );
+insert into Cinema_Type values ( 4, 'Platinum' , 600 , 2 );
+insert into Cinema_Type values ( 5, 'Gold' , 500 , 2 );
+insert into Cinema_Type values ( 6, 'Silver' , 400 , 2 );
+insert into Cinema_Type values ( 7, 'Platinum' , 700 , 3 );
+insert into Cinema_Type values ( 8, 'Gold' , 350 , 5 );
+insert into Cinema_Type values ( 9, 'Silver' , 30 , 4 );
+insert into Cinema_Type values ( 10, 'Platinum' , 400 , 6 );
+insert into Cinema_Type values ( 11, 'Gold' , 600 , 6 );
+insert into Cinema_Type values ( 12, 'Silver' , 400 , 5 );
+
+
+insert into staff values (1, 'John', 29, 1);
+insert into staff values (2, 'Mary', 12, 3);
+insert into staff values (3, 'Scott', 15, 2);
+insert into staff values (4, 'Munim', 26, 4);
+insert into staff values (5, 'Raza', 25, 1);
+insert into staff values (6, 'Aziz', 24, 6);
+insert into staff values (7, 'Zain', 23, 5);
+insert into staff values (8, 'Ali', 26, 3);
+insert into staff values (9, 'Vishal', 23, 2);
+insert into staff values (10, 'Rehman', 25, 4);
+insert into staff values (11, 'Seerat', 23, 2);
+insert into staff values (12, 'Anil', 27, 3);
+insert into staff values (13, 'Rajput', 23, 5);
+insert into staff values (14, 'Shehzad', 27, 6);
+insert into staff values (15, 'sidhaant', 22, 2);
+insert into staff values (16, 'aakash', 25, 3);
+insert into staff values (17, 'Parakash', 27, 5);
+insert into staff values (18, 'sunil', 28, 6);
+
+
+
+
+insert into Schedule values ( 2, 5, 8);
+insert into Schedule values ( 4, 1, 7);
+insert into Schedule values ( 2, 6, 6);
+insert into Schedule values ( 3, 7, 4);
+insert into Schedule values ( 5, 3, 11);
+insert into Schedule values ( 5, 4, 12);
+insert into Schedule values ( 6, 5, 12);
+insert into Schedule values ( 2, 8, 11);
+insert into Schedule values ( 7, 9, 6);
+insert into Schedule values ( 5, 1, 9);
+insert into Schedule values ( 8, 12, 8);
+insert into Schedule values ( 9, 11, 7);
+insert into Schedule values ( 10, 10, 3);
+insert into Schedule values ( 13, 11, 6);
+insert into Schedule values ( 12, 3, 1);
+insert into Schedule values ( 10, 2, 5);
+insert into Schedule values ( 15, 1, 4);
+insert into Schedule values ( 14, 5, 3);
+insert into Schedule values ( 13, 4, 4);
+insert into Schedule values ( 12, 7, 6);
+insert into Schedule values ( 11, 6, 3);
+insert into Schedule values ( 11, 8, 8);
+insert into Schedule values ( 1, 6, 7);
+insert into Schedule values ( 2, 5, 9);
+insert into Schedule values ( 3, 3, 10);
+insert into Schedule values ( 4, 4, 11);
+insert into Schedule values ( 5, 1, 14);
+insert into Schedule values ( 6, 8, 13);
+insert into Schedule values ( 7, 9, 15);
+insert into Schedule values ( 8, 10, 16);
+insert into Schedule values ( 9, 11, 16);
+insert into Schedule values ( 11, 11, 18);
+insert into Schedule values ( 12, 10, 17);
+insert into Schedule values ( 13, 9, 18);
+
+
+
+
+
+
+
+
+

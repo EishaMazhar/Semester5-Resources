@@ -1,0 +1,167 @@
+drop table Player;
+drop table Umpire;
+drop table Team;
+drop table Venue;
+drop table Match;
+
+
+create table Team(
+       team_id    int primary key,
+       team_name      varchar2(20),
+       team_rank   varchar2(20)
+);
+
+create table Player(
+       player_num      int primary key,
+       player_name     varchar2(20),
+       age        number(2),
+       team_id    int,
+       foreign key (team_id) references Team(team_id)
+       ON DELETE CASCADE      
+);
+
+create table Umpire(
+       umpire_id      int primary key,
+       umpire_name    varchar2(20),
+       team_id   int,
+       foreign key (team_id) references Team(team_id)
+       ON DELETE CASCADE      
+);
+
+
+create table Venue(
+       venue_name      varchar2(20) primary key,
+       time 	   varchar2(20),
+       umpire_id	   int,
+       foreign key (umpire_id) references Umpire(umpire_id)
+       ON DELETE CASCADE      
+);
+
+create table match(
+       player_num     int,
+       venue_name     varchar2(20),	
+       primary key (player_num,venue_name),
+       foreign key (player_num) references Player(player_num),
+       foreign key (venue_name) references Venue(venue_name)
+);
+
+
+insert into Team (team_id,team_name,team_rank)
+values(10,'Pakistan','First');
+insert into Team (team_id,team_name,team_rank)
+values(20,'Australia','Second');
+insert into Team (team_id,team_name,team_rank)
+values(30,'South Africa','Fourth');
+insert into Team (team_id,team_name,team_rank)
+values(40,'England','First');
+insert into Team (team_id,team_name,team_rank)
+values(50,'India','Last');
+insert into Team (team_id,team_name,team_rank)
+values(60,'Afghanistan','Second');
+insert into Team (team_id,team_name,team_rank)
+values(70,'Bangladesh','Fifth');
+insert into Team (team_id,team_name,team_rank)
+values(80,'New zealand','Fifth');
+insert into Team (team_id,team_name,team_rank)
+values(90,'Canada','Second');
+insert into Team (team_id,team_name,team_rank)
+values(100,'Zimbabwe','Sixth');
+insert into Team (team_id,team_name,team_rank)
+values(110,'Kenya','Second');
+
+
+insert into Player (player_num,player_name,age,team_id)
+values(122280,'Hassan',19,10);
+insert into Player (player_num,player_name,age,team_id)
+values(122046,'Mike',19,20);
+insert into Player (player_num,player_name,age,team_id)
+values(122062,'Ayaan',19,30);
+insert into Player (player_num,player_name,age,team_id)
+values(122021,'Ali',21,30);
+insert into Player (player_num,player_name,age,team_id)
+values(122023,'Zaeem',22,40);
+insert into Player (player_num,player_name,age,team_id)
+values(122292,'Rashid',18,60); 
+insert into Player (player_num,player_name,age,team_id)
+values(122212,'Micky',39,100);
+insert into Player (player_num,player_name,age,team_id)
+values(122214,'Jabeen',19,90);
+insert into Player (player_num,player_name,age,team_id)
+values(122216,'Raza',29,80);
+insert into Player (player_num,player_name,age,team_id)
+values(1222161,'Virat',19,40);
+insert into Player (player_num,player_name,age,team_id)
+values(1222162,'Afrdi',12,50);
+insert into Player (player_num,player_name,age,team_id)
+values(1222163,'Rehan',29,50);
+insert into Player (player_num,player_name,age,team_id)
+values(1222164,'Munim',20,50);
+insert into Player (player_num,player_name,age,team_id)
+values(1222165,'John',12,60);
+insert into Player (player_num,player_name,age,team_id)
+values(1222166,'Junaid',28,70);
+insert into Player (player_num,player_name,age,team_id)
+values(1222167,'zain',21,40);
+insert into Player (player_num,player_name,age,team_id)
+values(1222168,'Murad',19,100);
+insert into Player (player_num,player_name,age,team_id)
+values(1222169,'Junaid',18,10);
+
+insert into Umpire (umpire_id, umpire_name, team_id)
+values ( 1, 'Muhammad Rafi' , 50);
+insert into Umpire (umpire_id, umpire_name, team_id)
+values ( 2, 'Muhammad Usman' , 20);
+insert into Umpire (umpire_id, umpire_name, team_id)
+values ( 3, 'Muhammad Raza' , 30);
+insert into Umpire (umpire_id, umpire_name, team_id)
+values ( 4, 'Muhammad Ali' , 90);
+insert into Umpire (umpire_id, umpire_name, team_id)
+values ( 5, 'Muhammad Nabeel' , 50);
+
+
+insert into Venue ( venue_name, time, umpire_id) 
+values ( 'Abu Dhabi' , '10:30' , 1 );
+insert into Venue ( venue_name, time,umpire_id) 
+values ( 'Dubai' , '10:30', 2 );
+insert into Venue ( venue_name, time, umpire_id) 
+values ( 'Sydney' , '11:30', 3 );
+insert into Venue ( venue_name, time, umpire_id) 
+values ( 'Lords' , '12:30' ,  4 );
+insert into Venue ( venue_name, time, umpire_id) 
+values ( 'Nepal' , '1:30' ,  1 );
+insert into Venue ( venue_name, time, umpire_id) 
+values ( 'Mumbai' , '10:30' , 5 );
+
+
+insert into Match (player_num, venue_name)
+values (122280, 'Lords');
+insert into Match(player_num, venue_name)
+values (122212, 'Sydney');
+insert into Match(player_num, venue_name)
+values (122214, 'Dubai');
+insert into Match(player_num, venue_name)
+values (122046, 'Lords');
+insert into Match(player_num, venue_name)
+values (122062, 'Nepal');
+insert into Match(player_num, venue_name)
+values (122021, 'Sydney');
+insert into Match(player_num, venue_name)
+values (122280, 'Abu Dhabi');
+insert into Match (player_num, venue_name)
+values (122292, 'Dubai');
+insert into Match(player_num, venue_name)
+values (122023, 'Abu Dhabi');
+insert into Match(player_num, venue_name)
+values (1222161, 'Abu Dhabi');
+insert into Match(player_num, venue_name)
+values (122216, 'Abu Dhabi');
+insert into Match(player_num, venue_name)
+values (1222162, 'Dubai');
+insert into Match(player_num, venue_name)
+values (1222165, 'Sydney');
+insert into Match(player_num, venue_name)
+values (1222168, 'Nepal');
+insert into Match(player_num, venue_name)
+values (1222169, 'Mumbai');
+insert into Match(player_num, venue_name)
+values (1222162, 'Lords');

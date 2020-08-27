@@ -1,0 +1,34 @@
+
+SELECT deptno, AVG(sal) AVERAGE_SALARY FROM emp GROUP BY deptno;
+
+SELECT deptno, job , sum(sal) from emp GROUP BY deptno, job;
+
+SELECT deptno, AVG(sal) AVERAGE_SALARY FROM emp GROUP BY deptno HAVING AVG(sal) < 2000;
+
+EXERCISE:
+1.////
+SELECT * FROM emp where deptno in ( select 
+
+2.
+SELECT * FROM emp where deptno=10 AND sal >= any ( select sal from emp where deptno=30);
+
+3.
+SELECT * FROM  emp where deptno!=30 AND sal > all(select  sal from emp where deptno=30);
+
+4.
+SELECT deptno from dept where deptno not in ( select deptno from emp);
+
+5.
+SELECT ename, deptno from emp where deptno= any(select deptno from emp where comm >0) AND sal=any(select sal from emp where comm >0);
+
+6.
+SELECT deptno, count (*) from emp group by deptno;
+
+7.
+SELECT deptno, max(sal) from emp where sal>2900 group by deptno;
+
+8.
+SELECT job, sum(sal) from emp where deptno!=( select deptno from dept where dname = 'SALES') group by job having sum(sal)>5000 order by sum(sal);
+
+9.
+SELECT deptno from emp group by deptno having count(empno)>3;

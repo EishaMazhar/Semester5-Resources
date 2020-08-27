@@ -1,0 +1,67 @@
+CREATE TABLE faculty (faculty_id NUMBER(6),last_name VARCHAR(15) NOT NULL,first_name VARCHAR(15) NOT NULL,dept CHAR(3), CONSTRAINT faculty_pk PRIMARY KEY(faculty_id));
+
+CREATE TABLE DEPARTMENT (dept_code CHAR(3),dept_name VARCHAR(20) NOT NULL, CONSTRAINT dept_pk PRIMARY KEY(dept_code));
+
+ALTER TABLE department
+ADD location CHAR(7);
+
+ALTER TABLE faculty
+ADD CONSTRAINT faculty_dept_fk FOREIGN KEY(dept)
+REFERENCES DEPARTMENT(dept_code); 
+
+ALTER TABLE faculty
+MODIFY last_name VARCHAR(25);
+
+2-
+CREATE TABLE book (book_id Number(6),title VARCHAR(10), publisherName VARCHAR(15));
+CREATE TABLE book_author (book_id Number(6), authorName VARCHAR(15));
+CREATE TABLE publisher (name VARCHAR(15),address VARCHAR(25), phone NUMBER(20));
+CREATE TABLE book_copies (book_id Number(6),branch_id NUMBER(10), no_of_copies Number(3));
+CREATE TABLE book_loans (book_id Number(6),branch_id NUMBER(10), cardNo NUMBER(5), dateout VARCHAR(6), duedate VARCHAR(6));
+CREATE TABLE library_branch (branch_id NUMBER(10),branch_name VARCHAR(15),address VARCHAR(25));
+CREATE TABLE borrower (cardNo NUMBER(5),name VARCHAR(15),address VARCHAR(25),phone NUMBER(20));
+
+ALTER TABLE book
+ADD PRIMARY KEY (book_id);
+
+ALTER TABLE publisher
+ADD PRIMARY KEY (name);
+
+ALTER TABLE borrower
+ADD PRIMARY KEY(cardNo);
+
+ALTER TABLE library_branch
+ADD PRIMARY KEY (branch_id);
+
+ALTER TABLE book_author
+ADD FOREIGN KEY (book_id)
+REFERENCES book(book_id);
+
+ALTER TABLE book_author
+ADD PRIMARY KEY (book_id,authorName);
+
+ALTER TABLE book_copies
+ADD FOREIGN KEY (book_id)
+REFERENCES book(book_id);
+
+ALTER TABLE book_copies
+ADD FOREIGN KEY (branch_id)
+REFERENCES library_branch(branch_id);
+
+ALTER TABLE book_copies
+ADD PRIMARY KEY (book_id,branch_id);
+
+ALTER TABLE book_loans
+ADD FOREIGN KEY (book_id)
+REFERENCES book(book_id);
+
+ALTER TABLE book_loans
+ADD FOREIGN KEY (branch_id)
+REFERENCES library_branch(branch_id);
+
+ALTER TABLE book_loans
+ADD FOREIGN KEY (cardNo)
+REFERENCES borrower(cardNo);
+
+ALTER TABLE book_loans
+ADD PRIMARY KEY (book_id,branch_id,cardNo);

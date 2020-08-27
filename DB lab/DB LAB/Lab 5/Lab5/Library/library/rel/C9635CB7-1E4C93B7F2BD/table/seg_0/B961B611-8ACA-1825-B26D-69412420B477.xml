@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B961B611-8ACA-1825-B26D-69412420B477" name="Patrons">
+<sourceDDLFile>library.ddl</sourceDDLFile>
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>7B329281-ACB2-C050-93DF-B1B1E9A0A2E2</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<ordsAlias>entity_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A0C9A38F-8CB0-B6C1-E31C-AD028644FFAA">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>B75E88CF-0B85-BFBF-8B7D-4E9A1EC6078C</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>16EF3861-F3C7-F4E4-8796-35225D413C4D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="BD3AE7FE-B8FB-047F-75B4-DA5BE37DFC54">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>D9CE124A-A31B-82EC-98FB-4A0F8CD2A5AD</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>31FEC608-236C-0E48-A1C6-C7A292F2B4A1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Entity_4_ID" id="27909FAC-D695-69ED-39AC-AB4F2337F23C">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>Patrons_Entity_4_ID_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>Patrons_Entity_4_ID_TRG</autoIncrementTriggerName>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FA9E80CC-55DA-9AFF-2BDE-5B76D324C52F" name="Entity_4_PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="27909FAC-D695-69ED-39AC-AB4F2337F23C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

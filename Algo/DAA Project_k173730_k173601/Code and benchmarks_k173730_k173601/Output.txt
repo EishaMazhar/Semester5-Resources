@@ -1,0 +1,26 @@
+Total cost of Kruskal is 51.45 Mbps
+Total cost of Prim    is 51.45 Mbps
+Input node is 1 and cost by Dijikstra    is 122.25 Mbps
+Input node is 1 and cost by Bellman ford is 122.24999999999999 Mbps
+Total cost by Floyd Warshall is 2274.900000000001 Mbps
+Local Clustring Coefficient of node 0 is 0.5
+Local Clustring Coefficient of node 1 is 0.6666666666666666
+Local Clustring Coefficient of node 2 is 0.5357142857142857
+Local Clustring Coefficient of node 3 is 0.4
+Local Clustring Coefficient of node 4 is 0.15441176470588236
+Local Clustring Coefficient of node 5 is 0.4642857142857143
+Local Clustring Coefficient of node 6 is 0.16363636363636364
+Local Clustring Coefficient of node 7 is 0.4166666666666667
+Local Clustring Coefficient of node 8 is 0.4222222222222222
+Local Clustring Coefficient of node 9 is 0.6666666666666666
+Local Clustring Coefficient of node 10 is 1.0
+Local Clustring Coefficient of node 11 is 0.6666666666666666
+Local Clustring Coefficient of node 12 is 0
+Local Clustring Coefficient of node 13 is 0.6
+Local Clustring Coefficient of node 14 is 1.0
+Local Clustring Coefficient of node 15 is 0.6666666666666666
+Local Clustring Coefficient of node 16 is 0.6666666666666666
+Local Clustring Coefficient of node 17 is 0
+Local Clustring Coefficient of node 18 is 0
+Local Clustring Coefficient of node 19 is 0.6666666666666666
+The final Clustring coeffecient is 0.48284685086155676

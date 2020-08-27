@@ -1,0 +1,64 @@
+CREATE TABLE contacts
+( contact_id number(10) not null,
+  last_name varchar2(50) not null,
+  first_name varchar2(50) not null,
+  address varchar2(50),
+  city varchar2(50),
+  state varchar2(2),
+  zip_code varchar2(10),
+  CONSTRAINT contacts_pk PRIMARY KEY (contact_id)
+);
+
+* Sorting in descending order:
+SELECT supplier_city
+FROM suppliers
+WHERE supplier_name = 'Microsoft'
+ORDER BY supplier_city DESC;
+
+*JOINING Tables
+SELECT orders.order_id, suppliers.supplier_name
+FROM suppliers, orders
+WHERE suppliers.supplier_id = orders.supplier_id
+AND suppliers.supplier_name = 'Microsoft';
+
+* With INSERT Statement
+INSERT INTO suppliers
+(supplier_id, supplier_name)
+SELECT customer_id, customer_name
+FROM customers
+WHERE customer_name = 'Microsoft'
+AND customer_id <= 1000;
+
+*FROM clause Subquery
+SELECT suppliers.name, subquery1.total_amt
+FROM suppliers,
+ (SELECT supplier_id, SUM(orders.amount) AS total_amt
+  FROM orders
+  GROUP BY supplier_id) subquery1
+WHERE subquery1.supplier_id = suppliers.supplier_id;
+
+*SELECT clause Subquery
+SELECT tbls.owner, tbls.table_name,
+  (SELECT COUNT(column_name) AS total_columns
+   FROM all_tab_columns cols
+   WHERE cols.owner = tbls.owner
+   AND cols.table_name = tbls.table_name) subquery2
+FROM all_tables tbls;
+
+*With UPDATE Statement
+UPDATE suppliers
+SET supplier_name = 'Apple'
+WHERE supplier_name = 'RIM'
+AND offices = 8;
+
+*With DELETE Statement
+DELETE FROM suppliers
+WHERE supplier_name = 'Apple'
+AND product = 'iPod';
+
+*Write a query to find the manager ID and the salary of the lowest-paid employee for that manager.
+SELECT manager_id, MIN(salary)
+FROM employees
+WHERE manager_id IS NOT NULL
+GROUP BY manager_id
+ORDER BY MIN(salary) DESC;

@@ -1,0 +1,45 @@
+1. Write an sql query to fecth the  number of orders for each sales person. 
+
+Select SP_NO, SP_Name, Cust_Name, S_No, TotalAmount from Salesperson, Orders
+
+2. Suppose Centex Construction Group change their company name from Centex Construction Group to Tri-City Builders. Write an sql query to reflect this change in your result.
+
+Update Customer set Cust_NAME = 'tri-city builders' where Cust_NAME='Centex Construction Group';
+
+3. Write an sql query to retrieve salesperson number and salary from salesperson in single column as seperate rows.
+
+Select SP_No FROM Salesperson UNION ALL Select Salary FROM Salesperson 
+
+4. Show the industry type , salesperson name of all orders for companies in NEW YORK.
+
+Select city,industry_type,sp_name from salesperson ,customer,orders where  city='New York' and sp_no=s_no and cust_name=c_name
+
+
+5. Show the name of the salesperson who have more than three orders.
+
+Select SP_Name, from Salesperson, Customer where S_No=SP_NO AND Count (OrderNo)>3
+
+
+6. Show the salesperson name, qouta percentage and company name of sales people who has two or more  orders with the same company. 
+
+Select SP_Name, Quota_percent,C_Name FROM Salesperson, Orders, Customers Where S_No = SP_No AND Cust_Name = C_Name and Count OrderNo)>1
+
+
+7. Show the names of the sales people along with the name of customers which has orders from them . Include salespeople who have had no orders.
+
+Select SP_No, SP_NAME, CUST_NAME From Salesperson Left Outer Join Orders on S_No = SP_No 
+
+8. Show the name of sales person who have no order with the Bovis Lend Lease company.
+
+Select SP_No, SP_Name from Salesperson Where SP_No NOT IN (Select S_No From Orders, Salesperson where SP_No=S_No and Cust_Name='Bovis Lend Lease')
+
+
+9. Retrieve salesperson name in alphabetical order.
+
+Select SP_Name from Salesperson Order By SP_Name ASC
+
+10. Show salesperson who have no orders.
+
+Select SP_Name, SP_No from Salesperson, Customer where S_No=SP_No and COUNT (Order no) <1
+
+

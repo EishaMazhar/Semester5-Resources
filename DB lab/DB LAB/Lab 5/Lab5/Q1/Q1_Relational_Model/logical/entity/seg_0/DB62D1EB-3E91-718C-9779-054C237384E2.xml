@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DB62D1EB-3E91-718C-9779-054C237384E2" name="Department">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:06:51 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Name" id="F4FC0773-6E77-5A66-6B80-D633FE75F061">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:07:04 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dept_Code" id="CD8A5314-5396-03FA-1653-3F7421332AE2">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:07:16 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Office_No" id="45E5C619-BA90-FF5B-21ED-15D1FF860D83">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:07:41 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Office_Phone_No" id="F9554F4D-EB07-6041-E5D2-9932EF7CEB42">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:08:06 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="College" id="F6E0101C-6C73-E53C-744B-2B219D821110">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:11:51 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF144DD4-B49D-0FBA-0632-B2DCC85593B4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SSN" id="78ED89D3-A4E6-E106-8F92-AD3EA50F47BE">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:23:31 UTC</createdTime>
+<generatorID>22A954ED-88AC-B11B-5EEB-34D1C65C732C</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<referedAttribute>7CCDB23B-5D4A-7790-CCCA-04030927469A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id" id="042461DE-1C24-BB68-6379-0467C7CAD483">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:23:31 UTC</createdTime>
+<generatorID>22A954ED-88AC-B11B-5EEB-34D1C65C732C</generatorID>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<referedAttribute>756F9604-D982-8C07-4682-0254722093BD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CDA7A6B8-116A-1804-20B9-BB5B3D458C78" name="Department PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:12:21 UTC</createdTime>
+<ownerDesignName>Q1_Relational_Model</ownerDesignName>
+<engineerTo>
+<item key="4660DBAF-C927-C5EA-4091-1A1F123C8CC6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F4FC0773-6E77-5A66-6B80-D633FE75F061</attributeRef>
+<attributeRef>CD8A5314-5396-03FA-1653-3F7421332AE2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

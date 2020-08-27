@@ -1,0 +1,51 @@
+lab tasks--------------
+
+--drop table T;
+--CREATE TABLE T
+--(id integer primary key,
+--s varchar(40));
+--
+--insert into T VALUES(10,'MAHAM');
+--insert into T VALUES(20,'MAHAM');
+--insert into T VALUES(30,'MAHAM');
+--insert into T VALUES(40,'MAHAM');
+--insert into T VALUES(50,'MAHAM');
+--
+--
+--select * from T;
+--
+--ROLLBACK;
+--
+--select * from T;
+--
+--SET AUTOCOMMIT ON;
+--
+--insert into T VALUES(101,'MAHAM');
+--insert into T VALUES(201,'MAHAM');
+--insert into T VALUES(301,'MAHAM');
+--insert into T VALUES(401,'MAHAM');
+--insert into T VALUES(501,'MAHAM');
+--
+--select * from T;
+--
+--ROLLBACK;
+--
+--select * from T;
+
+create or replace procedure p2 is
+
+i int := 100;
+a int ;
+BEGIN
+while i > 1
+loop
+    select tno into a from k173739.tabs;
+    Insert into k173739.t_log values(a*5);
+end loop;
+end;
+
+--
+--SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+ 
+
+select * from K173739.tabs;

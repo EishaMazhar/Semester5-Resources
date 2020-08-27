@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3F01027F-2B16-5DC7-C919-5CFD04DBA37D" name="Book">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>B19439E6-7725-7CAB-4118-8F3A08D918DF</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<ordsAlias>entity_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="book_id" id="AF2D86B2-6D5D-C9FD-114A-BF6C0D819438">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>12DD805C-15DA-7078-5032-6EEF07F8A416</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="title" id="680A2AA5-9EE6-7F66-EFB7-687A453747A8">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>E5FD1805-63BE-2B55-B864-AE1AD63D76ED</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="author_last_name" id="551AD078-936C-AD21-1959-3F7D0262B360">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>E69478B0-CC82-2D59-8F5D-599EB0B4967C</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rating" id="5B3DFE25-CC1D-B852-990D-A503E3C901B4">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>A5C0C946-707F-E9D0-A466-024280E23B6D</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>10</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="authors_first_name" id="24A89DF9-0F04-7DFF-741B-013D32C3FDE8">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>95A650D9-85E8-A11A-5032-29E1C4E15E73</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3DB5EE04-388A-6525-3F4F-5334DD82AE2A" name="Entity_1_PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:14:04 UTC</createdTime>
+<generatorID>E9AB0151-AA1F-C8DD-11CA-B9C9DE96884A</generatorID>
+<ownerDesignName>library</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF2D86B2-6D5D-C9FD-114A-BF6C0D819438"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

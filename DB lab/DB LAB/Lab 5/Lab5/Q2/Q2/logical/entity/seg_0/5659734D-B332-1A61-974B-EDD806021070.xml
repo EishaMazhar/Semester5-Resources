@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5659734D-B332-1A61-974B-EDD806021070" name="Orders">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:38:49 UTC</createdTime>
+<ownerDesignName>Q2</ownerDesignName>
+<engineerTo>
+<item key="8CE70CB9-4858-C6CB-8F61-42342913CAB5" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="BE310A5C-D3D2-CE9D-5621-75977FA0ADBA">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:39:04 UTC</createdTime>
+<ownerDesignName>Q2</ownerDesignName>
+<engineerTo>
+<item key="8CE70CB9-4858-C6CB-8F61-42342913CAB5" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Qty_of_parts" id="C5744539-A825-B878-6CF3-7645C910BC41">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:39:12 UTC</createdTime>
+<ownerDesignName>Q2</ownerDesignName>
+<engineerTo>
+<item key="8CE70CB9-4858-C6CB-8F61-42342913CAB5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Received_Date" id="C1F47E39-DE18-E9EF-E147-C47799565773">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:39:38 UTC</createdTime>
+<ownerDesignName>Q2</ownerDesignName>
+<engineerTo>
+<item key="8CE70CB9-4858-C6CB-8F61-42342913CAB5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Shipped_Date" id="0BED2EDB-3B4E-8E27-B3E9-81AD19FC614E">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:40:24 UTC</createdTime>
+<ownerDesignName>Q2</ownerDesignName>
+<engineerTo>
+<item key="8CE70CB9-4858-C6CB-8F61-42342913CAB5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id1" id="E6D48F8D-B1F6-7D86-0FA5-EBAA6BD7AF0C">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:49:16 UTC</createdTime>
+<generatorID>1EBA6202-2365-F439-780C-D6D49032A2FD</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<engineerTo>
+<item key="8CE70CB9-4858-C6CB-8F61-42342913CAB5" value="true"/>
+</engineerTo>
+<referedAttribute>678398A5-5960-9351-AFA9-2816AD1BF6BD</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id2" id="B8656C4D-D4EB-9298-AE21-BD98D4174E8D">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:50:00 UTC</createdTime>
+<generatorID>3B9120D5-5683-143C-763C-14315D8FD7F3</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<engineerTo>
+<item key="8CE70CB9-4858-C6CB-8F61-42342913CAB5" value="true"/>
+</engineerTo>
+<referedAttribute>F2AB3399-BC0E-5A77-72A5-54F8FD7A3034</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id3" id="5D739790-A1F5-E69A-4A3C-CB53CC68E387">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:53:52 UTC</createdTime>
+<generatorID>A289531C-1CCE-FB2E-832C-F1E5BE26019F</generatorID>
+<ownerDesignName>Q2</ownerDesignName>
+<engineerTo>
+<item key="8CE70CB9-4858-C6CB-8F61-42342913CAB5" value="true"/>
+</engineerTo>
+<referedAttribute>9D9C7D47-93DC-B677-BFA6-88ABB5E69214</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>12F5D894-F4FA-BFCC-0B73-B9B480C8C444</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8E68BB6D-254E-242B-BCA2-92B811B3F73A" name="Orders PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 08:41:07 UTC</createdTime>
+<ownerDesignName>Q2</ownerDesignName>
+<engineerTo>
+<item key="8CE70CB9-4858-C6CB-8F61-42342913CAB5" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BE310A5C-D3D2-CE9D-5621-75977FA0ADBA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,23 @@
+Q-1
+
+INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno)
+VALUES (7123, ‘RALPH’, ‘DESIGNER’, 7566, 21-APR-85, 2300, NULL, 50);
+
+INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno)
+VALUES (7890, ‘GEORGE’, ‘CLERK’, 7566, 03-MAY-85, 1235, NULL, 50);
+
+INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno)
+VALUES (7629, ‘BOB’, ‘SALESMAN’, 7698, 06-MAR-86, 1800, 1000, 30);
+
+Q-2
+
+UPDATE emp
+SET sal = sal+250
+where job = 'CLERK' AND sal < 900;
+
+UPDATE emp
+SET deptno = 20 AND sal = sal*1.15
+where empno = 7890;
+
+DELETE from emp
+where TO_CHAR (hiredate,'YYYY') < 1981;

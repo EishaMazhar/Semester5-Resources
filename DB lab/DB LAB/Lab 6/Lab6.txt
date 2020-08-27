@@ -1,0 +1,166 @@
+Q-1
+
+SET SERVEROUTPUT ON;
+DECLARE
+num1 INTEGER;
+num2 INTEGER;
+sum1 INTEGER;
+BEGIN
+num1:= &num1;
+num2:= &num2;
+sum1:= num1 + num2;
+DBMS_OUTPUT.PUT_LINE ('sum1 = ' || sum1);
+END;
+
+Q-2
+
+SET SERVEROUTPUT ON;
+DECLARE
+lb INTEGER;
+ub INTEGER;
+cnt INTEGER;
+sum1 INTEGER:=0;
+BEGIN
+lb:= &lb;
+ub:= &ub;
+for cnt in lb..ub loop
+ sum1:= sum1 + cnt;
+end loop;
+DBMS_OUTPUT.PUT_LINE ('sum1 = ' || sum1);
+END;
+
+Q-3
+
+DECLARE
+ENO EMP.EMPNO%TYPE;
+NAME EMP.ENAME%TYPE;
+hdate EMP.HIREDATE%type;
+deptname DEPT.DNAME%type;
+BEGIN
+ENO:= &ENO;
+SELECT ENAME, hiredate,dname INTO NAME, hdate, deptname FROM EMP e,dept d WHERE
+e.EMPNO=ENO AND e.deptno = d.deptno ;
+DBMS_OUTPUT.PUT_LINE ('NAME OF THE EMPLOYEE IS '||NAME);
+DBMS_OUTPUT.PUT_LINE ('HIREDATE OF THE EMPLOYEE IS '||HDATE);
+DBMS_OUTPUT.PUT_LINE ('DEPARTMENT NAME OF THE EMPLOYEE IS '||DEPTNAME);
+END;
+
+Q-4
+
+SET SERVEROUTPUT ON;
+DECLARE
+n INTEGER;
+reverse INTEGER;
+rem INTEGER;
+original_n INTEGER;
+BEGIN
+n:= &n;
+original_n:= n;
+while n!=0
+LOOP
+rem:= n%10;
+reverse:= reverse*10 + rem;
+n:= n/10;
+END LOOP;
+IF original_n = reverse THEN
+ DBMS_OUTPUT.PUT_LINE (origial_n || 'is a palindrome');
+ELSE
+ DBMS_OUTPUT.PUT_LINE (origial_n || 'is not a palindrome');
+END IF;
+END;
+
+Q-5
+
+SET SERVEROUTPUT ON
+DECLARE
+ENO EMP.EMPNO%TYPE;
+NAME EMP.ENAME%TYPE;
+EJOB EMP.JOB%TYPE;
+EMGR EMP.MGR%TYPE;
+EHIRE EMP.HIREDATE%TYPE;
+ESAL EMP.SAL%TYPE;
+ECOMM EMP.COMM%TYPE;
+D_NO EMP.DEPTNO%TYPE;
+
+department_id DEPT.DEPTNO%TYPE;
+department_name DEPT.DNAME%TYPE;
+location DEPT.LOC%TYPE;
+
+BEGIN
+ENO:= &ENO;
+NAME:= &NAME;
+EJOB:= &EJOB;
+EMGR:= &EMGR;
+EHIRE:= &EHIRE;
+ESAL:= &ESAL;
+ECOMM:= &ECOMM;
+D_NO:= &D_NO;
+
+department_id:= &department_id; 
+department_name:= &department_name;
+location:= &location;
+
+INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES
+(&ENO,'&NAME','&EJOB',&EMGR,TO_DATE('&EHIRE', 'DD-MON-YYYY'),&ESAL,&ECOMM,&D_NO);
+
+INSERT INTO dept (deptno, dname, loc) VALUES
+(&department_id,'&department_name','&location');
+END;
+
+Q-6
+
+SET SERVEROUTPUT ON;
+DECLARE
+t emp.empno%type;
+BEGIN
+
+for  loop
+select name,sal,eno,mgr from emp where e.empno = t;
+ IF sal >= 2500 THEN
+  EXIT
+ END IF;
+END LOOP;
+
+Q-7
+
+DECLARE
+i NUMBER;
+x integer :=0;
+BEGIN
+For i IN 1..100 LOOP
+ x := x + i;
+END loop;
+dbms_output.put_line('The sum is ' || x);    
+END;
+
+Q-8
+
+create view emp_view 
+AS
+select * from EMP where DEPT.DNAME = 'ACCOUNTING';
+
+Q-9
+
+SET SERVEROUTPUT ON;
+BEGIN
+for i in (select empno, ename, job, mgr, hiredate, sal, comm, deptno from emp where sal>2000)
+loop
+ DBMS_OUTPUT.PUT_LINE (i.empno ||' '|| i.ename ||' '|| i.job ||' '|| i.mgr ||' '|| i.hiredate ||' '|| i.sal ||' '|| i.comm ||' '|| i.deptno);
+end loop;
+END;
+
+Q-10
+
+Q-11
+
+CREATE OR REPLACE PROCEDURE sum IS
+    num1 number := 10;
+    num2 number := 20;
+    num number := 0;
+    
+BEGIN
+   num := num1 + num2;
+   dbms_output.put_line ('The sum is ' || num);
+END;
+
+execute sum;

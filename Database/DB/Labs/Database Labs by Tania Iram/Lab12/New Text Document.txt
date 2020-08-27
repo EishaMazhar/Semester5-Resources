@@ -1,0 +1,3 @@
+one of the best link to understand mongodb if you know sql queries
+
+https://docs.mongodb.org/manual/reference/sql-comparison/

@@ -1,0 +1,28 @@
+--select deptno from emp where count  >= 3
+
+--select upper(ename) as name, length(ename) as length from emp where 
+(ename LIKE 'J%' OR ename LIKE 'A%' ename LIKE 'M%')
+
+
+--select to_char (sysdate ,'day month yyyy') FROM DUAL
+--select to_char (sysdate ,'yyyy')-1999 FROM DUAL
+--select to_date ('01/09/1999','dd/mm/yyyy') FROM DUAL
+--initcap ('') lower('')
+--select avg (sal from emp )
+--select  initcap (ENAME) , lower(JOB) from EMP
+--select EMPNO, UPPER ('BLAKE') , DEPTNO from EMP WHERE Ename = 'BLAKE' 
+--SELECT EMPNO , TO_CHAR(HIREDATE, 'MONTH YEAR') FROM EMP
+--SELECT SAL*12 , ENAME , JOB  FROM EMP
+--SELECT * FROM EMP ORDER BY SAL ASC
+--SELECT TO_CHAR (SAL,'$9999') FROM EMP WHERE ENAME = 'SCOTT'
+--SELECT * FROM EMP WHERE (SAL/30) > 100
+--SELECT EMPNO , ENAME , SAL , (sal + sal*0.15) as NewSalary, 
+(sal + sal*0.15) - sal as Inncrement from e
+--select ename , nvl2(comm , to_char (comm), 'no comiision') from emp
+--select ename , hiredate ,to_char(hiredate,'day') as day from emp
+--select INITCAP(ename) as name  , LENGTH(ename) as length from emp where(ename like 'J%' or ename like 'A%' or ename like 'M%') ;
+--select ename from emp where (to_char(sysdate,'yyyy') - to_char(hiredate,'yyyy')>35 );
+--select SUM(sal) from emp;
+--select deptno , count(*) from emp group by deptno ;
+--select deptno ,  max(sal)from emp group by deptno having max(sal)>2900;
+--select deptno, count(deptno) from emp group by deptno having count(deptno)>3;

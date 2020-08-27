@@ -1,0 +1,34 @@
+apex.oracle.com
+jxspace
+JAHANZEB.JX@GMAIL.COM
+pass: 1234567890
+
+
+
+
+	Name of the sailors who registered N or more boats boats.
+	
+	select s.sname from sailors s where N<(select count(*) from reserves r where s.sid=r.sid);
+
+	Name of the sailors who reserved maximum number of boats.
+	
+	select s.sname from sailors s where (select count(*) from reserves r where s.sid=r.sid)=(select max(a) from (select count(*) as a from reserves group by sid));
+
+	Name of the sailors who reserved two boats.
+	
+	select s.sname from sailors s where 2=(select count(*) from reserves r where s.sid=r.sid);
+
+	Name of the sailor who reserved all boats.	
+	
+	select s.sname from sailors s where (select count(*) from boats)=(select count(*) from reserves r where s.sid=r.sid);
+
+	Name and id of sailor who reserved two different boats on same day.
+	
+	SELECT DISTINCT S.sid, S.sname
+		FROM Sailors S, Reserves R1, Reserves R2
+		WHERE S.sid = R1.sid AND S.sid = R2.sid
+		AND R1.day = R2.day AND R1.bid <> R2.bid;
+
+	sailor name with third character m.
+	
+	select sname from sailors where substr(sname,3,1)='m';

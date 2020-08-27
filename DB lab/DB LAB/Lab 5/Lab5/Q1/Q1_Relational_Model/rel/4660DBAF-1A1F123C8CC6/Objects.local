@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="3836C19B-3D4B-A03E-0AFB-C700335ED183" name="Course" seqName="seg_0"/>
+   <object objectType="Table" objectID="CFDDDB13-6D05-2ACC-E450-DBA3E04AADD3" name="Department" seqName="seg_0"/>
+   <object objectType="Table" objectID="C97969AC-4F9B-3F69-0068-4D088473CB6A" name="Grade_Report" seqName="seg_0"/>
+   <object objectType="Table" objectID="86759124-C7D1-C98B-B0D2-3A62264BC665" name="Section" seqName="seg_0"/>
+   <object objectType="Table" objectID="41EF7780-2A8D-E3CD-D259-1C42C37A5BD5" name="Student" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="4A3C5BCF-28E2-F28C-5FFE-A90A377686DC" name="Course_Student_FK" seqName="seg_0" containerID="3836C19B-3D4B-A03E-0AFB-C700335ED183" refContainerID="41EF7780-2A8D-E3CD-D259-1C42C37A5BD5"/>
+   <object objectType="FKIndexAssociation" objectID="C3F3EF37-7C0D-8F9A-FDA2-86702552CCAC" name="Department_Student_FK" seqName="seg_0" containerID="CFDDDB13-6D05-2ACC-E450-DBA3E04AADD3" refContainerID="41EF7780-2A8D-E3CD-D259-1C42C37A5BD5"/>
+   <object objectType="FKIndexAssociation" objectID="73F87BE0-45B3-6FA1-C90B-C8B360C896EF" name="Grade_Report_Student_FK" seqName="seg_0" containerID="C97969AC-4F9B-3F69-0068-4D088473CB6A" refContainerID="41EF7780-2A8D-E3CD-D259-1C42C37A5BD5"/>
+   <object objectType="FKIndexAssociation" objectID="4E2CE1C3-18EA-03DB-3F7B-068DAE88B8BC" name="Section_Student_FK" seqName="seg_0" containerID="86759124-C7D1-C98B-B0D2-3A62264BC665" refContainerID="41EF7780-2A8D-E3CD-D259-1C42C37A5BD5"/>
+   <object objectType="FKIndexAssociation" objectID="9162EC84-21CE-D6A8-8837-78957ADDD3BB" name="Student_Course_FK" seqName="seg_0" containerID="41EF7780-2A8D-E3CD-D259-1C42C37A5BD5" refContainerID="3836C19B-3D4B-A03E-0AFB-C700335ED183"/>
+   <object objectType="FKIndexAssociation" objectID="748E3348-3F5F-2A5A-FEE8-4008B8927D71" name="Student_Department_FK" seqName="seg_0" containerID="41EF7780-2A8D-E3CD-D259-1C42C37A5BD5" refContainerID="CFDDDB13-6D05-2ACC-E450-DBA3E04AADD3"/>
+   <object objectType="FKIndexAssociation" objectID="D0F734E1-1612-DD42-25B4-AD0040C3ACA7" name="Student_Section_FK" seqName="seg_0" containerID="41EF7780-2A8D-E3CD-D259-1C42C37A5BD5" refContainerID="86759124-C7D1-C98B-B0D2-3A62264BC665"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

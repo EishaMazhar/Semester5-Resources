@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="B19439E6-7725-7CAB-4118-8F3A08D918DF" name="Entity_1" seqName="seg_0"/>
+   <object objectType="Entity" objectID="7B329281-ACB2-C050-93DF-B1B1E9A0A2E2" name="Entity_4" seqName="seg_0"/>
+   <object objectType="Entity" objectID="71FE5D8E-A705-CC3D-7246-3E4ABA1286EE" name="Entity_5" seqName="seg_0"/>
+   <object objectType="Relation" objectID="82059178-B8A1-8B41-3144-FB7FBD0FAB74" name="book_trans" seqName="seg_0"/>
+   <object objectType="Relation" objectID="9259DEAD-6635-4BB9-C9C2-8DFB29B7684F" name="patron_transaction" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

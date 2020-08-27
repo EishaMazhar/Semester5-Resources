@@ -1,0 +1,23 @@
+Select SP_NO, SP_Name, Cust_Name, S_No, TotalAmount from Salesperson, Orders;
+
+Update Customer set Cust_NAME = 'tri-city builders' where Cust_NAME='Centex Construction Group';
+
+Select SP_No FROM Salesperson UNION ALL Select Salary FROM Salesperson;
+
+Select city,industry_type,sp_name from salesperson ,customer,orders where  city='New York' and sp_no=s_no and cust_name=c_name;
+
+Select SP_Name, from Salesperson, Customer where S_No=SP_NO AND Count (OrderNo)>3;
+
+Select SP_Name, Quota_percent,C_Name FROM Salesperson, Orders, Customers Where S_No = SP_No AND Cust_Name = C_Name and Count OrderNo)>1;
+
+Select SP_No, SP_NAME, CUST_NAME From Salesperson Left Outer Join Orders on S_No = SP_No;
+
+Select SP_No, SP_Name from Salesperson Where SP_No NOT IN (Select S_No From Orders, Salesperson where SP_No=S_No and Cust_Name='Bovis Lend Lease');
+
+Select SP_Name from Salesperson Order By SP_Name ASC;
+
+Select SP_Name, SP_No from Salesperson, Customer where S_No=SP_No and COUNT (Order no) <1;
+
+
+
+ 

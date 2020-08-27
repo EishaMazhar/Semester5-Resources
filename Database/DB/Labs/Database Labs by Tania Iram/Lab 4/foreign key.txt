@@ -1,0 +1,88 @@
+--------------------Primary key in Parent table--------------------------------
+======================================================
+
+CREATE TABLE supplier
+( supplier_id numeric(10) not null,
+  supplier_name varchar2(50) not null,
+  contact_name varchar2(50),
+  CONSTRAINT supplier_pk PRIMARY KEY (supplier_id, supplier_name)
+);
+
+----------------Foreign key in Child table --------------------------------------
+======================================================
+
+CREATE TABLE products
+( product_id numeric(10) not null,
+  supplier_id numeric(10) not null,
+  supplier_name varchar2(50) not null,
+  CONSTRAINT fk_supplier_comp
+    FOREIGN KEY (supplier_id, supplier_name)
+    REFERENCES supplier(supplier_id, supplier_name)
+);
+
+
+---------------WHAT IS A FOREIGN KEY WITH CASCADE----------------------------
+ ------------------------------DELETE IN ORACLE?---------------------------------------
+=============================================================
+A foreign key with cascade delete means that if a record in the parent table is deleted, then the corresponding records in the child table will automatically be deleted. This is called a cascade delete in Oracle.
+
+A foreign key with a cascade delete can be defined in either a CREATE TABLE statement or an ALTER TABLE statement.
+e.g.
+CREATE TABLE supplier
+( supplier_id numeric(10) >not null,
+  supplier_name varchar2(50) not null,
+  contact_name varchar2(50),
+  CONSTRAINT supplier_pk PRIMARY KEY (supplier_id)
+);
+------------------Cascade delete using Using Create table--------------------------------
+==============================================================
+CREATE TABLE products
+( product_id numeric(10) not null,
+  supplier_id numeric(10) not null,
+  CONSTRAINT fk_supplier
+    FOREIGN KEY (supplier_id)
+    REFERENCES supplier(supplier_id)
+    ON DELETE CASCADE
+);
+------------------Cascade delete using Using Alter table--------------------------------
+=============================================================
+ALTER TABLE products
+ADD CONSTRAINT fk_supplier
+  FOREIGN KEY (supplier_id)
+  REFERENCES supplier(supplier_id)
+  ON DELETE CASCADE;
+---------------"SET NULL ON DELETE" IN ORACLE------------------------------------
+==============================================================
+A foreign key with "set null on delete" means that if a record in the parent table is deleted, then the corresponding records in the child table will have the foreign key fields set to null. The records in the child table will not be deleted.
+
+A foreign key with a "set null on delete" can be defined in either a CREATE TABLE statement or an ALTER TABLE statement.
+
+------------------Set Null on delete using Using Create table----------------------------
+==============================================================
+CREATE TABLE supplier
+( supplier_id numeric(10) not null,
+  supplier_name varchar2(50) not null,
+  contact_name varchar2(50),
+  CONSTRAINT supplier_pk PRIMARY KEY (supplier_id)
+);
+
+CREATE TABLE products
+( product_id numeric(10) not null,
+  supplier_id numeric(10),
+  CONSTRAINT fk_supplier
+    FOREIGN KEY (supplier_id)
+    REFERENCES supplier(supplier_id)
+    ON DELETE SET NULL
+);
+------------------Set Null on delete using Using Alter table--------------------------------
+===============================================================
+ALTER TABLE products
+ADD CONSTRAINT fk_supplier
+  FOREIGN KEY (supplier_id)
+  REFERENCES supplier(supplier_id)
+  ON DELETE SET NULL;
+====================GETTING CONSTRINTS LIST FROM A TABLE===============================
+SELECT constraint_name, constraint_type,
+      search_condition
+      FROM USER_CONSTRAINTS
+       WHERE table_name ='EMP';

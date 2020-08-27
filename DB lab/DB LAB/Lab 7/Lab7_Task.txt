@@ -1,0 +1,59 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "library";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+// sql to create table
+
+$sql = "CREATE TABLE Publisher (Name VARCHAR(15)  PRIMARY KEY,Address VARCHAR(30) NOT NULL,Phone int(11) NOT NULL);";
+
+$sql = "CREATE TABLE Book (BookId INT(5)  PRIMARY KEY,Title VARCHAR(5) NOT NULL,PublisherName VARCHAR(5) NOT NULL,
+add constraint pubName foreign key (PublisherName) 
+refereneces Publisher(Name)
+);";
+
+$sql = "CREATE TABLE Book_Authors (BookId INT(5), AuthorName VARCHAR(5),PRIMARY KEY (BookId,AuthorName),
+add constraint authBookId foreign key (BookId) 
+refereneces Book(BookId)
+);";
+
+$sql = "CREATE TABLE Libaray_Branch (BranchId INT(5) PRIMARY KEY,BranchName VARCHAR(5) NOT NULL,Address VARCHAR(5) NOT NULL);";
+
+$sql = "CREATE TABLE Borrower (CardNo INT(5) PRIMARY KEY,Name VARCHAR(5) NOT NULL,Address VARCHAR(5) NOT NULL,Phone VARCHAR(5));";
+
+$sql = "CREATE TABLE Book_Copies ( BookId INT(5),BranchId INT(5),No_Of_Copies INT(5),PRIMARY KEY (BookId, BranchId),
+add constraint copyBookId foreign key (BookId) 
+refereneces Book(BookId),
+add constraint copyBranchId foreign key (BranchId) 
+refereneces Libaray_Branch(BranchId)
+);";
+
+$sql = "CREATE TABLE Book_Loans (BookId INT(5),BranchId INT(5),CardNo INT(5),DateOut TIMESTAMP NOT NULL, DueDate TIMESTAMP NOT NULL
+add constraint loanBookId foreign key (BookId) 
+refereneces Book(BookId),
+
+add constraint loanBranchId foreign key (BranchId) 
+refereneces Libaray_Branch(BranchId),
+
+add constraint loanCardNo foreign key (CardNo) 
+refereneces Borrower(CardNo);
+);";
+
+if ($conn->multi_query ($sql) == TRUE)
+{
+	echo "Table created successfully";
+}
+else
+{
+	echo "Error creating table: " . $conn->error;
+}
+
+$conn->close();
+?>  

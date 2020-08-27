@@ -1,0 +1,99 @@
+Task 1  :
+CREATE TABLE dept10 AS SELECT * FROM dept;
+CREATE PROCEDURE add10_dept IS
+dept_id dept.deptno%TYPE;
+dept_name dept.dname%TYPE;
+BEGIN
+dept_id:=2;
+dept_name:='abc';
+INSERT INTO dept(deptno,dname)
+VALUES(dept_id,dept_name);
+DBMS_OUTPUT.PUT_LINE(' Inserted '||SQL%ROWCOUNT ||' row ');
+END; 
+/
+BEGIN
+ add10_dept;
+END;
+/
+SELECT deptno, dname FROM dept WHERE deptno=2;
+
+Task 2 : 
+
+SET SERVEROUTPUT ON;
+
+CREATE function addition(a number,b number)
+return number
+Is
+Begin
+dbms_output.put_Line('the sum of '||a||' and '||b||' is :');
+return (a+b);
+End;
+/
+
+BEGIN
+dbms_output.put_line(addition(6,78));
+end; 
+/
+
+QUESTION 4 : To Write a pl/sql program for creating a procedure for calculating sum of two numbers. 
+Execute it as well.
+
+SET SERVEROUTPUT ON;
+cREATE PROCEDURE add1(a NUMBER,b NUMBER) Is
+addd NUMBER;
+BEGIN
+addd := a + b;
+dbms_output.put_Line('The sum of '||a||' and '||b||' is :'||addd);
+End;
+/
+
+BEGIN
+add1(6,78);
+END; 
+/
+
+
+QUESTION 3 : Write a PL/SQL program displaying top 10 employee details
+
+SET SERVEROUTPUT ON;
+DECLARE
+CURSOR CV_EMP IS SELECT ename,empno,sal FROM EMP;
+name EMP.ename%TYPE;
+no EMP.empno%TYPE;
+sal EMP.SAL%TYPE;
+
+BEGIN
+OPEN CV_EMP;
+FOR i in 1..10
+loop
+fetch CV_EMP into name,no,sal;
+DBMS_OUTPUT.PUT_LINE(name || ' ' || no || ' ' || sal);
+END loop;
+CLOSE CV_EMP;
+END;
+/
+
+QUESTION 2 : Write a PL/SQL code to print out the employee information who earns more than 2000 salary.
+
+
+SET SERVEROUTPUT ON;
+ DECLARE
+ CURSOR CV_EMP IS SELECT ename,empno,sal FROM EMP WHERE sal>=2000;
+ name EMP.ename%TYPE;
+ no EMP.empno%TYPE;
+ sal EMP.SAL%TYPE;
+ BEGIN
+ OPEN CV_EMP;
+ LOOP
+ fetch CV_EMP INTO name,no,sal;
+ EXIT WHEN CV_EMP%notfound;
+ DBMS_OUTPUT.PUT_LINE(name || ' ' || no || ' ' || sal);
+ END LOOP;
+ CLOSE CV_EMP;
+ END;
+/
+
+
+QUESTION 1 : Create a view, that stores information of only those employees who belongs to Accounts department.
+
+CREATE VIEW EMP2 AS SELECT ENAME,EMPNO,SAL FROM EMP WHERE DEPTNO = 10;

@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="204B9FF5-58B5-B6BF-15F5-962BE8220516" name="Customer" seqName="seg_0"/>
+   <object objectType="Table" objectID="6DF4875A-B581-F4A2-43CF-317E7E9DA763" name="Employee" seqName="seg_0"/>
+   <object objectType="Table" objectID="C6AAA251-54FC-6746-C07F-2BBA1B186B95" name="Orders" seqName="seg_0"/>
+   <object objectType="Table" objectID="BBAC62BD-F458-6F68-06B7-3A880488B2E4" name="Parts" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="E0B1386E-14EB-7C92-5D7C-EDA4D535E705" name="Customer_Orders_FK" seqName="seg_0" containerID="204B9FF5-58B5-B6BF-15F5-962BE8220516" refContainerID="C6AAA251-54FC-6746-C07F-2BBA1B186B95"/>
+   <object objectType="FKIndexAssociation" objectID="3A17349D-498D-DD05-5AA4-953E6096D4EC" name="Orders_Customer_FK" seqName="seg_0" containerID="C6AAA251-54FC-6746-C07F-2BBA1B186B95" refContainerID="204B9FF5-58B5-B6BF-15F5-962BE8220516"/>
+   <object objectType="FKIndexAssociation" objectID="D17BA805-F802-7C77-2B83-3427518D5F3F" name="Orders_Employee_FK" seqName="seg_0" containerID="C6AAA251-54FC-6746-C07F-2BBA1B186B95" refContainerID="6DF4875A-B581-F4A2-43CF-317E7E9DA763"/>
+   <object objectType="FKIndexAssociation" objectID="072FAE9C-E601-4785-3C0A-A37E41E2855F" name="Orders_Parts_FK" seqName="seg_0" containerID="C6AAA251-54FC-6746-C07F-2BBA1B186B95" refContainerID="BBAC62BD-F458-6F68-06B7-3A880488B2E4"/>
+   <object objectType="FKIndexAssociation" objectID="9EE8A61D-A760-429D-9220-0066757F448B" name="Parts_Orders_FK" seqName="seg_0" containerID="BBAC62BD-F458-6F68-06B7-3A880488B2E4" refContainerID="C6AAA251-54FC-6746-C07F-2BBA1B186B95"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

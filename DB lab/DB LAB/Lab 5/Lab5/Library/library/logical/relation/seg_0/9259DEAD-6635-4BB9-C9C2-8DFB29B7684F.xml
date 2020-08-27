@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="patron_transaction" directorySegmentName="seg_0" id="9259DEAD-6635-4BB9-C9C2-8DFB29B7684F">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 07:12:30 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="C9635CB7-A894-9307-F642-1E4C93B7F2BD" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7B329281-ACB2-C050-93DF-B1B1E9A0A2E2</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>71FE5D8E-A705-CC3D-7246-3E4ABA1286EE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B19439E6-7725-7CAB-4118-8F3A08D918DF" name="Entity_1">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 06:44:10 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="C9635CB7-A894-9307-F642-1E4C93B7F2BD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="book_id" id="12DD805C-15DA-7078-5032-6EEF07F8A416">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 06:44:23 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="C9635CB7-A894-9307-F642-1E4C93B7F2BD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="title" id="E5FD1805-63BE-2B55-B864-AE1AD63D76ED">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 06:46:27 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="C9635CB7-A894-9307-F642-1E4C93B7F2BD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="author_last_name" id="E69478B0-CC82-2D59-8F5D-599EB0B4967C">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 06:47:58 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="C9635CB7-A894-9307-F642-1E4C93B7F2BD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rating" id="A5C0C946-707F-E9D0-A466-024280E23B6D">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 06:49:56 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="C9635CB7-A894-9307-F642-1E4C93B7F2BD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>10</endValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="authors_first_name" id="95A650D9-85E8-A11A-5032-29E1C4E15E73">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 06:51:56 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="C9635CB7-A894-9307-F642-1E4C93B7F2BD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E9AB0151-AA1F-C8DD-11CA-B9C9DE96884A" name="Entity_1 PK">
+<createdBy>K173658</createdBy>
+<createdTime>2019-10-01 06:45:16 UTC</createdTime>
+<ownerDesignName>library</ownerDesignName>
+<engineerTo>
+<item key="C9635CB7-A894-9307-F642-1E4C93B7F2BD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>12DD805C-15DA-7078-5032-6EEF07F8A416</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

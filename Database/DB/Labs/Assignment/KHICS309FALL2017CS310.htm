@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Assignments</title>
+    <link href="/library/skin/tool_base.css" type="text/css" rel="stylesheet" media="all" />
+<link href="/library/skin/default/tool.css" type="text/css" rel="stylesheet" media="all" />
+<script type="text/javascript" language="JavaScript" src="/library/js/headscripts.js"></script>
+<script type="text/javascript" language="JavaScript">var sakai = sakai || {}; sakai.editor = sakai.editor || {}; 
+sakai.editor.collectionId = '/group/KHICS309FALL2017CS/';
+sakai.editor.enableResourceSearch = false;</script>
+<script type="text/javascript" language="JavaScript"></script>
+<script type="text/javascript" language="JavaScript" src="/library/editor/FCKeditor/fckeditor.js"></script>
+<script type="text/javascript" language="JavaScript" src="/library/editor/fckeditor.launch.js"></script>
+	
+    
+    	            
+    
+  </head>
+  <body  onload="setMainFrameHeight('MainKHICS309FALL2017CS310');setFocus(focus_path);"  >
+<!-- $Id: chef_assignments_student_view_submission.vm 104470 2012-02-07 16:33:38Z zqian@umich.edu $ -->
+<!-- start: chef_assignments_student_view_submission.vm  -->
+<!-- $Id: assignment_macros.vm 94199 2011-06-28 20:59:16Z holladay@longsight.com $ -->
+<!-- start:  assignment_macros.vm -->
+<!-- end:  assignment_macros.vm --><script type="text/javascript" src="/library/js/jquery.js"></script>
+<link href="/sakai-assignment-tool/css/assignment.css" type="text/css" rel="stylesheet" media="all" />
+<script type="text/javascript"  src="/sakai-assignment-tool/js/assignments.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    setupToggleAreas('toggleAnchor', 'toggledContent', false, 'fast');
+    $('#submissionFileCount').val(1);
+    $('#addMoreAttachmentControls').click(function(e){
+        e.preventDefault();
+        if ($('#submissionFileCount').val() < 5) {
+            var $input = $('#clonableUpload').clone().removeAttr('id').addClass('cloned').appendTo('#clonedHolder').children('input');
+            $input.val('');
+            var $count = $('#submissionFileCount').val();
+            var $nameCount = "upload"+$count;
+            $input.attr("name", $nameCount);
+            $('#submissionFileCount').val(parseInt($('#submissionFileCount').val(), 10) + 1);
+            if ($('#submissionFileCount').val() == 5) {
+                $('#addMoreAttachmentControls').hide();
+                $('#addMoreAttachmentControlsInactive').show();
+            }
+        }
+        $('.cloned a').show();
+        resizeFrame('grow');
+    });
+    
+});
+var notifyDeleteControl = function(){
+    $('#submissionFileCount').val(parseInt($('#submissionFileCount').val(), 10) - 1);
+    if ($('#submissionFileCount').val() < 5) {
+        $('#addMoreAttachmentControls').show();
+        $('#addMoreAttachmentControlsInactive').hide();
+    }
+};
+
+function submitform(id)
+{
+	var theForm = document.getElementById(id);
+	if(theForm && theForm.onsubmit)
+	{
+		theForm.onsubmit();
+	}
+	if(theForm && theForm.submit)
+	{
+		theForm.submit();
+	}
+}
+		
+</script>
+
+
+<div class="portletBody">
+												<table class="itemSummary"  summary="The assignment info">
+				<tr>
+					<th>
+						Title
+					</th>
+					<td>
+						Assignment 01 (For All Sections A to G)
+																	</td>
+				</tr>
+				<tr>
+					<th>
+						Due
+					</th>
+					<td>
+						Oct 20, 2017 3:55 pm
+					</td>
+				</tr>
+													<tr>
+						<th>
+							Number of resubmissions allowed
+						</th>
+						<td>
+							1
+						</td>
+					</tr>
+										<tr>
+						<th>
+							Accept Resubmission Until
+						</th>
+						<td>
+							Oct 20, 2017 3:55 pm
+						</td>
+					</tr>
+																	<tr>
+					<th>
+						Status
+					</th>
+					<td>
+																					In progress
+																		</td>
+				</tr>
+																			<tr>	
+							<th>
+								Grade Scale
+							</th>
+							<td>
+								Ungraded
+															</td>
+						</tr>
+																						<tr>
+						<th>
+								Modified by instructor
+						</th>
+						<td>
+							Oct 20, 2017 1:07 pm
+						</td>
+					</tr>
+											</table>
+		<h4>
+			Instructions
+		</h4>
+		
+					<div class="textPanel"><br/>
+<br/>
+See Attached!</div>
+																											<h4>
+				Additional resources for assignment
+			</h4>	
+				<ul class="attachList indnt1">
+																		<li>
+																	<img src = "/library/image/sakai/pdf.gif?panel=Main" border="0" alt="File attachment" />
+																	<a href="http://slate.nu.edu.pk/access/content/attachment/KHICS309FALL2017CS/Assignments/9c3e3c0a-c2b7-404f-adf6-57154282faf9/OOAD-%20Assignment%2001.pdf" target="_blank">OOAD- Assignment 01.pdf</a>						
+									<span class="textPanelFooter">(
+			344 KB;
+		Oct 3, 2017 12:33 pm
+	)</span>
+							</li>
+																								<li>
+																	<img src = "/library/image/sakai/pdf.gif?panel=Main" border="0" alt="File attachment" />
+																	<a href="http://slate.nu.edu.pk/access/content/attachment/KHICS309FALL2017CS/Assignments/752fccee-eb4f-413e-8fd3-ea3beb357611/ATM%20Case%20Study.pdf" target="_blank">ATM Case Study.pdf</a>						
+									<span class="textPanelFooter">(
+			1 MB;
+		Oct 3, 2017 12:34 pm
+	)</span>
+							</li>
+															</ul>
+																							        	<!-- $Id: chef_assignments_tags_list.vm 94199 2011-06-28 20:59:16Z holladay@longsight.com $ -->
+<!-- start: chef_assignments_tags_list.vm  -->
+<script type="text/javascript" language="JavaScript">
+
+function saveChanges(formName, textAreaId) {
+	var _textArea = document.getElementById(textAreaId);
+	if (_textArea != null) {
+		if (typeof FCKeditorAPI != "undefined") {
+			var editor = FCKeditorAPI.GetInstance(textAreaId);
+			document[formName].savedText.value = editor.GetXHTML(false);
+		}
+	}
+}
+
+iframeId = 'MainKHICS309FALL2017CS310';
+
+</script>
+<form name="form" action="http://slate.nu.edu.pk/portal/tool/KHICS309FALL2017CS310?panel=Main" method="post">
+	<input type="hidden" name="sakai_action" value=""/>
+	<input type="hidden" name="providerId" value=""/>
+	<input type="hidden" name="criteria" value=""/>
+	<input type="hidden" name="savedText" value=""/>
+					</form>
+<!-- end: chef_assignments_tags_list.vm  -->				<hr class="itemSeparator" />
+						<h3>Submission</h3> 
+		
+
+
+					<form name="addSubmissionForm" id="addSubmissionForm" action="http://slate.nu.edu.pk/portal/tool/KHICS309FALL2017CS310?panel=Main" method="post" onsubmit="return true;" enctype="multipart/form-data">
+		<input type="hidden" name="eventSubmit_doRead_add_submission_form" value="x" />
+		<input type="hidden" name="option" id="option" value="cancel" />
+		<input type="hidden" name="currentAttachment" value="" />
+		<input type="hidden" name="assignmentId" value="/assignment/a/KHICS309FALL2017CS/befa1f6e-20f1-45ec-bc76-0b7bf832f04a" />
+																															No attachments yet
+																																	<p class="act">
+				<input 
+					type="button" 
+					name="cancel"
+					accesskey="x"
+					id="cancel" 
+					value="Done"
+					onclick="document.addSubmissionForm.onsubmit();document.addSubmissionForm.option.value='cancel'; document.addSubmissionForm.submit(); return false;"
+				/>
+			</p>
+			</form>
+	</div>
+<!-- end: chef_assignments_student_view_submission.vm  -->
+</body></html>
